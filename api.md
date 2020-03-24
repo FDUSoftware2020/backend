@@ -28,11 +28,17 @@
     }
     ```
 
-[TOC]
+## Table of Contents
+-   [Account APIs](# Account APIs)
+    -   [1. POST /account/register](# 1. POST /account/register)
+    -   [2. POST /account/login](#2. POST /account/login)
+    -   [3. GET /account/logout (login required)](# 3. GET /account/logout (login required))
+-   [Passage APIs](#Passage APIs)
+-   [User Actions APIs](#User Actions APIs)
 
 
 
-## Part I. Account APIs
+## Account APIs
 
 This part includes functions related to user account, like register, login and logout.
 
@@ -102,9 +108,9 @@ no data
 
 
 
-## Part II. Passage APIs
+## Passage APIs
 
 
 
-## Part III. User Actions APIs
+## User Actions APIs
 
