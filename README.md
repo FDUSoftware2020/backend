@@ -6,7 +6,11 @@
 
 ## Table of Contents
 
-[TOC]
+-   [Background](#background)
+-   [Install](#install)
+-   [Usage](#Usage)
+-   [Contributing](#contributing)
+-   [License](#license)
 
 ## Background
 

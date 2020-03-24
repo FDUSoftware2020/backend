@@ -6,7 +6,18 @@
 
 ![](https://img.shields.io/badge/FSDN-Development_Manual-brightgreen.svg)![](https://img.shields.io/badge/Manual-Documentation-green.svg)
 
-[TOC]
+## Table of Contents
+
+-   [Git & GitHub Requirements](#Git & GitHub Requirements)
+    -   [1. Tips](# 1. Tips)
+    -   [2. Operations](#2. Operations)
+-   [API Requirements](#API Requirements)
+-   [Documentation Requirements](#Documentation Requirements)
+    -   [1. README](#1. README)
+    -   [2. 需求文档](#2. 需求文档)
+    -   [3. 设计文档](#3. 设计文档)
+
+
 
 ## Git & GitHub Requirements
 
