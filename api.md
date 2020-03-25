@@ -49,7 +49,7 @@
 ### 1. POST /account/register
 
 **Description:** 注册一个新用户
-* 须提供数据：用户名、密码、重复密码、邮箱、4位验证码
+* 须提供数据：用户名、密码、邮箱、4位验证码
 
 #### 1.1 request format
 
@@ -57,7 +57,6 @@
 {
     "username":<str>,
     "password":<str>,
-    "re_password":<str>,
     "email":<str>,
     "verification":<str>
 }
@@ -164,7 +163,7 @@ no data
 ### 6. POST /account/modify_password
 
 **Description:** 修改密码
-* 须提供数据：用户邮箱、密码、重复密码、4位验证码
+* 须提供数据：用户邮箱、新密码、4位验证码
 
 #### 6.1 request format
 
@@ -172,7 +171,6 @@ no data
 {
     "email":<str>,
     "password":<str>,
-    "re_password":<str>,
     "verification":<str>
 }
 ```
