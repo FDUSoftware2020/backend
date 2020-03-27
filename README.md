@@ -26,7 +26,17 @@
 
 ## Usage
 
-使用教程
+使用教程  
+
+**1.修改EMAIL_HOST_PASSWORD**  
+django作为第三方发送邮件，需要提供EMAIL_HOST_PASSWORD。请咨询starshine获取正确的EMAIL_HOST_PASSWORD值，并在setting.py文件中修改EMAIL_HOST_PASSWORD为正确值。  
+
+**2.运行指令**
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver <IP>:<PORT>
+```
 
 ## Contributing
 
