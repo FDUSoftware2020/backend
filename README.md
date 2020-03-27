@@ -18,15 +18,19 @@
 
 ## Release
 
-记录更新日志
+**1.Account相关功能** (2020-03-27)  
+具体有：注册、登录、登出、验证码、修改用户名、修改密码。
+
+**2.允许跨域** (2020-03-27)  
+后端可支持跨域请求。
+
 
 ## Install
-
-安装教程
+* 安装python：版本在3.6及以上
+* 安装django：版本在2.2及以上，建议3.0
+* 安装django-cors-headers：pip install django-cors-headers
 
 ## Usage
-
-使用教程  
 
 **1.修改EMAIL_HOST_PASSWORD**  
 django作为第三方发送邮件，需要提供EMAIL_HOST_PASSWORD。请咨询starshine获取正确的EMAIL_HOST_PASSWORD值，并在setting.py文件中修改EMAIL_HOST_PASSWORD为正确值。EMAIL_HOST_PASSWORD属安全信息，请大家在push时**勿包含**此信息！
