@@ -27,8 +27,8 @@
 
 ## Install
 * 安装python：版本在3.6及以上
-* 安装django：版本在2.2及以上，建议3.0
-* 安装django-cors-headers：pip install django-cors-headers
+* 安装django：版本在2.2及以上（建议3.0），pip3 install django==3.0
+* 安装django-cors-headers：该插件用于支持跨域请求，pip3 install django-cors-headers
 
 ## Usage
 
@@ -41,6 +41,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver <IP>:<PORT>
 ```
+note：本地测试时，IP和PORT可省略,默认是127.0.0.1:800；部署到服务器上时，目前服务器开放的端口是8000，设置为"0:8000"（不包含引号）即可。
 
 ## Contributing
 
