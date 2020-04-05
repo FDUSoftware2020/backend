@@ -41,7 +41,9 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver <IP>:<PORT>
 ```
-note：本地测试时，IP和PORT可省略,默认是127.0.0.1:800；部署到服务器上时，目前服务器开放的端口是8000，设置为"0:8000"（不包含引号）即可。
+**note：** 
+1) 本地测试时，IP和PORT可省略,默认是127.0.0.1:800；部署到服务器上时，目前服务器开放的端口是8000，设置为"0:8000"（不包含引号）即可。 
+2) 关于csrf设置。在测试时，可能出现Forbidden (CSRF cookie not set.)错误。此时，简单粗暴的方法是在setting.py文件的MIDDLEWARE中注释掉'django.middleware.csrf.CsrfViewMiddleware'，关闭csrf检测。
 
 ## Contributing
 
