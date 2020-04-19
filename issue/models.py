@@ -14,7 +14,6 @@ class Issue(models.Model):
 class Answer(models.Model):
     ''' 定义Answer类，即对Issue的回答
     '''
-    ID = models.PositiveIntegerField(primary_key=True)     # ID of an answer
     issue = models.ForeignKey(Issue, on_delete=models.CSCADE)     # 回答的Isssue
     replier = models.ForeignKey('account.User', on_delete=models.CASCADE)     # 回答者
     pub_date = models.DateTimeField()    # 提问时间

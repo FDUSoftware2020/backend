@@ -5,7 +5,6 @@ from django.db import models
 class Article(models.Model):
     ''' 定义Article类
     '''
-    ID = models.PositiveIntegerField(primary_key=True)    # ID of an article
     title = models.CharField(max_length=100)    # 标题
     author = models.ForeignKey('account.User', on_delete=models.CASCADE)     # 作者
     pub_date = models.DateTimeField()    # 发布时间
