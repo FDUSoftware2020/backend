@@ -1,127 +1,276 @@
-import json, random
+import json, random, datetime
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import User
+from django.core.mail import send_mail
+from django.utils import timezone
+from .models import User, VerificationCode
 
 # Create your views here.
 
 def register(request):
     ''' 实现用户注册功能，须以POST方式
+
+    Arguments:
+        request: It should contains {"username":<str>, "email":<str>, "password":<str>, "verification":<str>} in the body.
     
     Return:
-        HttpRepsonse, which contains {'status':<int>, 'description':<str>} as below
-        0 --> 注册成功
-        1 --> 该用户名已存在
-        2 --> 用户名或密码为空
-        3 --> 请求方式错误
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
     '''
 
-    if request.method == 'POST':
+    if request.method == "POST":
         content = json.loads(request.body)
-        username = content.get('username')
-        password = content.get('password')
-        if username == "" or password == "":
-            content = {'status':2, 'description':'用户名或密码为空'}
+        username = content.get("username")
+        email = content.get("email")
+        password = content.get("password")
+        code = content.get("verification")
+        # try registering
+        if username == "" or email == "" or password == "" or code == "":
+            content = {"err_code":-1, "message":"用户名、邮箱、密码或验证码为空", "data":None}
         elif User.objects.filter(username=username).exists():
-            content = {'status':1, 'description':'该用户名已存在'}
+            content = {"err_code":-1, "message":"该用户名已存在", "data":None}
+        elif User.objects.filter(email=email).exists():
+            content = {"err_code":-1, "message":"该邮箱已被注册", "data":None}
+        elif not check_verification_code(email, code):
+            content = {"err_code":-1, "message":"验证码错误或已过期", "date":None}
         else:
-            User.objects.create(username=username, password=password)
-            content = {'status':0, 'description':'注册成功'}
+            User.objects.create(username=username, email=email, password=password)
+            content = {"err_code":0, "message":"注册成功", "data":None}
     else:
-        content = {'status':3, 'description':'请求方式错误'}
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
 
     return HttpResponse(json.dumps(content))
-    
+  
 
 def login(request):
-    ''' 实现登录功能，须以POST方式
+    ''' 实现登录功能，须以POST方式. If successful, cookie would be set.
+
+    Arguments:
+        request: It should contains {"username":<str>, "password":<str>} in the body.
     
     Return:
-        HttpRepsonse, which contains {'status':<int>, 'description':<str>} as below
-        0 --> 登录成功
-        1 --> 用户名或密码错误
-        2 --> 请求方式错误
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
     '''
 
-    if request.method == 'POST':
+    if request.method == "POST":
         content = json.loads(request.body)
-        username = content.get('username')
-        password = content.get('password')
-        if User.objects.filter(username=username, password=password).exists():
-            user = User.objects.get(username=username, password=password)
+        username = content.get("username")
+        password = content.get("password")
+        if ask_login_user(request):
+            content = {"err_code":-1, "message":"当前已登录，请先退出登录", "data":None}
+            return HttpResponse(json.dumps(content))
+        elif not User.objects.filter(username=username, password=password).exists():
+            content = {"err_code":-1, "message":"用户名或密码错误", "data":None}
+            return HttpResponse(json.dumps(content))
+        else:
             cookie_value = make_cookie()
+            # save cookie_value in user
+            user = User.objects.filter(username=username, password=password)[0]
             user.cookie_value = cookie_value
             user.save()
-            content = {'status':0, 'description':'登录成功'}
+            # conduct response
+            content = {"err_code":0, "message":"登录成功", "data":None}
             response = HttpResponse(json.dumps(content))
-            response.set_cookie('cookie_value', cookie_value, max_age=2*60*60)  # 设置cookie，有效时间2小时
-            return response
-        else:
-            content = {'status':1, 'description':'用户名或密码错误'}
-            return HttpResponse(json.dumps(content))
+            response.set_cookie("cookie_value", cookie_value, max_age=6*60*60)  
+            return response  
     else:
-        content = {'status':2, 'description':'请求方式错误'}
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
         return HttpResponse(json.dumps(content))
 
 
 def logout(request):
-    ''' 退出登录
-    '''
-    
-    response = HttpResponse()
-    response.delete_cookie('cookie_value')
-    return response
-
-
-# some assist functions
-
-def make_cookie(length = 50):
-    ''' 随机生成cookie value
+    ''' 退出登录. If successful, cookie would be deleted.
 
     Arguments:
-        length: 生成随机字符串的长度
+        request: no data in the body
     
     Return:
-        生成的随机字符串，即cookie value
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
     '''
-
-    cookie_value = ''
-    for i in range(length):
-        cookie_value += str(random.randint(0, 9))
     
-    return cookie_value
-
-
-def is_login(request):
-    ''' 判断当前是否处于登录状态
-    
-    Return:
-        True: 已登录；  False: 未登录
-    '''
-
-    cookie_value = request.COOKIES.get('cookie_value')
-    if not cookie_value:
-        return False
-    elif not User.objects.filter(cookie_value=cookie_value).exists():
-        return False
+    if not ask_login_user(request):
+        content = {"err_code":-1, "message":"当前未登录", "data":None}
+        return HttpResponse(json.dumps(content))
     else:
-        return True
+        content = {"err_code":0, "message":"成功退出登录", "data":None}
+        response = HttpResponse(json.dumps(content))
+        response.delete_cookie("cookie_value")
+        return response
+
+
+def verify(request):
+    ''' 进行验证, 须以POST方式
+
+    Arguments:
+        request: It should contains {"email":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
+    '''
+
+    if request.method == "POST":
+        content = json.loads(request.body)
+        email = content.get("email")
+        if email == "":
+            content = {"err_code":-1, "message":"邮箱为空", "data":None}
+        else:
+            code = make_verification_code()
+            # save verification code
+            save_verification_code(email, code)
+            # send verification email
+            subject = "FSDN论坛"
+            message = "欢迎使用FSDN论坛！您本次操作的验证码是{}。此验证码10分钟内有效。".format(code)
+            send_mail(subject, message, "fdc_forum@163.com", [email], fail_silently=False)
+            # conduct the content
+            content = {"err_code":0, "message":"成功发送验证码", "data":None}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
+
+
+def modify_username(request):
+    ''' 修改用户名, 须以POST方式
+
+    Arguments:
+        request: It should contains {"username":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
+    '''
+
+    if request.method == "POST":
+        content = json.loads(request.body)
+        username = content.get("username")
+        user = ask_login_user(request)
+        if not user:
+            content = {"err_code":-1, "message":"当前未登录", "data":None}
+        elif username == "":
+            content = {"err_code":-1, "message":"用户名为空", "data":None}
+        elif User.objects.filter(username=username).exists():
+            content = {"err_code":-1, "message":"该用户名已存在", "data":None}
+        else:
+            user.username = username
+            user.save()
+            content = {"err_code":0, "message":"用户名修改成功", "data":None}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
+
+
+def modify_password(request):
+    ''' 修改密码, 须以POST方式
+
+    Arguments:
+        request: It should contains {"email":<str>, "password":<str>, "verification":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
+    '''
+
+    if request.method == "POST":
+        content = json.loads(request.body)
+        email = content.get("email")
+        password = content.get("password")
+        code = content.get("verification")
+        if email == "" or password == "" or code == "":
+            content = {"err_code":-1, "message":"邮箱、密码或验证码为空", "data":None}
+        elif not check_verification_code(email, code):
+            content = {"err_code":-1, "message":"验证码错误或过期", "data":None}
+        else:
+            if not User.objects.filter(email=email).exists():
+                content = {"err_code":-1, "message":"该邮箱无对应用户", "data":None}
+            else:
+                user = User.objects.filter(email=email)[0]
+                user.password = password
+                user.save()
+                content = {"err_code":0, "message":"密码修改成功", "data":None}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
 
 
 def ask_user(request):
-    ''' 查询当前登录用户
+    ''' 查询当前登录用户，仅用于前端处理
+
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":user or None}
+    '''
+
+    obj = ask_login_user(request)
+    if not obj:
+        content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        user = {"username":obj.username, "email":obj.email}
+        content = {"err_code":0, "message":"查询成功", "data":user}
+    return HttpResponse(json.dumps(content))
+    
+
+# some assist functions
+
+def make_cookie():
+    ''' 随机生成长度为50的cookie value
+    '''
+
+    cookie_value = ""
+    for i in range(50):
+        cookie_value += str(random.randint(0, 9))
+    return cookie_value
+
+
+def make_verification_code():
+    ''' 随机生成4位验证码
+    '''
+
+    code = ""
+    for i in range(4):
+        code += str(random.randint(0, 9))
+    return code
+
+
+def save_verification_code(email, code):
+    ''' 保存验证码，email不可为空
+    '''
+
+    if not VerificationCode.objects.filter(email=email).exists():
+        VerificationCode.objects.create(email=email, code=code, make_time=timezone.now())
+    else:
+        obj = VerificationCode.objects.filter(email=email)[0]
+        obj.code = code
+        obj.make_time = timezone.now()
+        obj.save()
+
+def check_verification_code(email, code):
+    ''' 核对验证码
+    
+    Returns:
+        If the code is error or out of date, return false; otherwise, return true
+    '''
+
+    if not VerificationCode.objects.filter(email=email).exists():
+        return False
+    else:
+        obj = VerificationCode.objects.filter(email=email)[0]
+        if obj.code != code or timezone.now() > obj.make_time + datetime.timedelta(minutes=10):
+            return False
+        else:
+            return True
+
+
+def ask_login_user(request):
+    ''' 查询当前登录用户，仅用于后端处理
 
     Return:
         已登录时，返回登录对象即an object of class User;
         未登录时，返回None
     '''
 
-    cookie_value = request.COOKIES.get('cookie_value')
+    cookie_value = request.COOKIES.get("cookie_value")
     if not cookie_value:
         return None
     else:
-        user = User.objects.get(cookie_value=cookie_value)
-        if not user:
+        if not User.objects.filter(cookie_value=cookie_value).exists():
             return None
         else:
-            return user
+            return User.objects.filter(cookie_value=cookie_value)[0]
