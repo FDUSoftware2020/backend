@@ -29,10 +29,10 @@
     ```
 
 ## Table of Contents
--   [Account APIs](# Account APIs)
-    -   [1. POST /account/register](# 1. POST /account/register)
-    -   [2. POST /account/login](#2. POST /account/login)
-    -   [3. GET /account/logout (login required)](# 3. GET /account/logout (login required))
+-    [Account APIs](#Account APIs)
+        -   [1. POST /account/register](#1-post-accountregister)
+        -   [2. POST /account/login](#2-post-accountlogin)
+        -   [3. GET /account/logout (login required)](#3-get-accountlogout-login-required)
 -   [Passage APIs](#Passage APIs)
 -   [User Actions APIs](#User Actions APIs)
 
