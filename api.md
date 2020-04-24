@@ -35,9 +35,11 @@
     -   [2. POST /account/login/](#2-post-accountlogin)
     -   [3. GET /account/logout/](#3-get-accountlogout)
 	-   [4. POST /account/verify/](#4-post-accountverify)
-	-   [5. POST /account/modify_username/](#5-post-accountmodify_username)
-	-   [6. POST /account/modify_password/](#6-post-accountmodify_password)
-    -   [7. GET /account/ask_user/](#7-get-accountask_user)
+	-   [5. POST /account/modify_password/](#5-post-accountmodify_password)
+	-   [6. POST /account/modify_username/](#6-post-accountmodify_username)
+	-   [7. POST /account/modify_signature/](#7-post-accountmodify_signature)
+    -   [8. GET /account/ask_login_user/](#7-get-accountask_login_user)
+	-   [9. POST /account/ask_user/](#9-post-accountask_user)
 -   [Issue APIs](#Issue-APIs)
     -   [1. POST /issue/create/](#1-post-issuecreate)
     -   [2. GET /issue/&lt;int:issue_id&gt;/delete/](#2-get-issue&lt;int:issue_id&gt;delete)
@@ -58,14 +60,13 @@
 	-   [5. GET /comment/&lt;int:comment_id&gt;/like/](#5-get-comment&lt;int:comment_id&gt;like)
 
 
-
 ## Preface
 
 * starshine在编写api.md草案时惊觉Issue和Article在数据结构、操作逻辑上有着较高的相似度，为避免重复造轮子，尝试将Article并入Issue中，增加字段Type用于区分。在此文档中Issue对象泛指问题（issue）和文章（article），进而形成如下APIs。
 
 * 关于pub_date的格式，一个例子是：2019-05-24,14:36:13
 
-* 不足之处：Account的APIs还可以适当完善（我会先在后端完善Account功能再修改Account的API）、欠缺图像上传的APIs、Issue暂时未考虑标签
+* 不足之处：欠缺图像上传的APIs、Issue暂时未考虑标签
 
 
 ## Account APIs
@@ -150,7 +151,6 @@ no data
 }
 ```
 
-
 #### 4.2 response format
 
 ```json
@@ -161,15 +161,17 @@ no data
 }
 ```
 
-### 5. POST /account/modify_username/
+### 5. POST /account/modify_password/
 
-**Description:** 修改用户名，须处于登录状态
+**Description:** 修改密码
 
 #### 5.1 request format
 
 ```json
 {
-    "username": <str>
+    "email": <str>,
+    "password": <str>,
+    "verification": <str>
 }
 ```
 
@@ -183,20 +185,17 @@ no data
 }
 ```
 
-### 6. POST /account/modify_password/
+### 6. POST /account/modify_username/
 
-**Description:** 修改密码
+**Description:** 修改用户名，须处于登录状态
 
 #### 6.1 request format
 
 ```json
 {
-    "email": <str>,
-    "password": <str>,
-    "verification": <str>
+    "username": <str>
 }
 ```
-
 
 #### 6.2 response format
 
@@ -208,15 +207,59 @@ no data
 }
 ```
 
-### 7. GET /account/ask_user/
+### 7. POST /account/modify_signature/
 
-**Description:** 查询当前登录用户信息，须处于登录状态
+**Description:** 修改个性签名，须处于登录状态
 
 #### 7.1 request format
 
-no data
+```json
+{
+    "signature": <str>
+}
+```
 
 #### 7.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <no data>
+}
+```
+
+### 8. GET /account/ask_login_user/
+
+**Description:** 查询当前登录用户用户名，须处于登录状态
+
+#### 8.1 request format
+
+no data
+
+#### 8.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <str, 即username> or <no data>
+}
+```
+
+### 9. POST /account/ask_user/
+
+**Description:** 查询任意用户信息
+
+#### 9.1 request format
+
+```json
+{
+    "username": <str>
+}
+```
+
+#### 9.2 response format
 
 ```json
 {
@@ -231,7 +274,9 @@ no data
 ```
 {
     "username": <str, 用户名>,
-    "email": <str, 邮箱>
+    "email": <str, 邮箱>,
+	"signature": <str, 个性签名>,
+	"contribution": <int, 贡献值>
 }
 ```
 
@@ -408,7 +453,6 @@ no data
 }
 ```
 
-
 ### 8. POST /issue/&lt;int:issue_id&gt;/answer/create/
 
 **Description:** 新建对某个Issue的回答，其中issue_id指明是哪个issue，须处于登录状态
@@ -566,7 +610,6 @@ no data
 	"data": <no data>
 }
 ```
-
 
 ### 3. GET /comment/&lt;int:comment_id&gt;/detail/
 

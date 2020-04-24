@@ -4,8 +4,8 @@ from .models import User, VerificationCode
 # Register your models here.
 
 class UserAdmin(admin.ModelAdmin):
-    fields = ['username', 'email', 'password', 'cookie_value']
-    list_display = ('username', 'email', 'password')
+    fields = ['username', 'email', 'password', 'cookie_value', 'signature', 'contribution']
+    list_display = ('username', 'email', 'password', 'signature', 'contribution')
     search_fields = ['username', 'email']
 
 
