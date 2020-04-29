@@ -520,7 +520,8 @@ no data
 	"pub_date": <str, 回答时间>,
 	"content": <str, 回答的内容>,
 	"like_num": <int, 点赞数>,
-	"IsLiking": <bool, True表示当前用户已点赞, False表示未点赞, 未登录时默认False>
+	"IsLiking": <bool, True表示当前用户已点赞, False表示未点赞, 未登录时默认False>,
+	"comment_num": <int, 评论数目>
 }
 ```
 
