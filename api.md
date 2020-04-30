@@ -64,7 +64,7 @@
 
 * starshine在编写api.md草案时惊觉Issue和Article在数据结构、操作逻辑上有着较高的相似度，为避免重复造轮子，尝试将Article并入Issue中，增加字段Type用于区分。在此文档中Issue对象泛指问题（issue）和文章（article），进而形成如下APIs。
 
-* 关于pub_date的格式，一个例子是：2019-05-24,14:36:13
+* 关于pub_date的格式，一个例子是："2019-05-24 14:36"
 
 * 不足之处：欠缺图像上传的APIs、Issue暂时未考虑标签
 

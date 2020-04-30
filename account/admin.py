@@ -4,14 +4,14 @@ from .models import User, VerificationCode
 # Register your models here.
 
 class UserAdmin(admin.ModelAdmin):
-    fields = ['username', 'email', 'password', 'cookie_value', 'signature', 'contribution']
-    list_display = ('username', 'email', 'password', 'signature', 'contribution')
+    list_display = ('username', 'email', 'password', 'contribution')
+    fields = ['username', 'email', 'password', 'signature', 'contribution']
     search_fields = ['username', 'email']
 
 
 class VerificationCodeAdmin(admin.ModelAdmin):
-    fields = ['email', 'code', 'make_time']
     list_display = ('email', 'code', 'make_time')
+    fields = ['email', 'code', 'make_time']
     search_fields = ['email']
 
 

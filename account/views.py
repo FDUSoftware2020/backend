@@ -55,17 +55,16 @@ def login(request):
         data = json.loads(request.body)
         username = data.get("username")
         password = data.get("password")
+        user = backend_ask_user(username, password)
         if backend_ask_login_user(request):
             content = {"err_code":-1, "message":"当前已登录，请先退出登录", "data":None}
             return HttpResponse(json.dumps(content))
-        elif not User.objects.filter(username=username, password=password).exists() and \
-             not User.obects.filter(email=username, password=password).exists():
+        elif not user:
             content = {"err_code":-1, "message":"用户名或密码错误", "data":None}
             return HttpResponse(json.dumps(content))
         else:
             cookie_value = make_cookie()
             # save cookie_value in user
-            user = User.objects.filter(username=username, password=password)[0]
             user.cookie_value = cookie_value
             user.save()
             # conduct response
@@ -325,3 +324,18 @@ def backend_ask_login_user(request):
             return None
         else:
             return User.objects.filter(cookie_value=cookie_value)[0]
+
+
+def backend_ask_user(username, password):
+    ''' 若存在返回相应的用户，否则返回None
+
+    Arguments:
+        username: 用户名或邮箱地址
+        password: 密码
+    '''
+    if User.objects.filter(username=username, password=password).exists():
+        return User.objects.filter(username=username, password=password)[0]
+    elif User.objects.filter(email=username, password=password).exists():
+        return User.objects.filter(email=username, password=password)[0]
+    else:
+        return None
