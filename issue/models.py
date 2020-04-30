@@ -15,7 +15,8 @@ class Issue(models.Model):
     author = models.ForeignKey('account.User', on_delete=models.CASCADE)          # 作者
     pub_date = models.DateTimeField()                                             # 发布时间
     content = models.TextField()                                                  # 详细内容
-    liker = models.ManyToManyField('account.User', related_name='issue_liker')    # 点赞者
+    collectors = models.ManyToManyField('account.User')                           # 收藏者
+    likers = models.ManyToManyField('account.User', related_name='issue_liker')   # 点赞者
 
 
 class Answer(models.Model):
@@ -25,11 +26,5 @@ class Answer(models.Model):
     replier = models.ForeignKey('account.User', on_delete=models.CASCADE)          # 回答者
     pub_date = models.DateTimeField()                                              # 回答时间
     content = models.TextField()                                                   # 回答的内容
-    liker = models.ManyToManyField('account.User', related_name='answer_liker')    # 点赞者
+    likers = models.ManyToManyField('account.User', related_name='answer_liker')   # 点赞者
 
-
-class IssueCollection(models.Model):
-    ''' 定义对Issue的收藏夹
-    '''
-    issue = models.ForeignKey(Issue, on_delete=models.CASCADE)                 # which issue
-    collector = models.ForeignKey('account.User', on_delete=models.CASCADE)    # which user
