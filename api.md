@@ -64,7 +64,11 @@
 
 * starshine在编写api.md草案时惊觉Issue和Article在数据结构、操作逻辑上有着较高的相似度，为避免重复造轮子，尝试将Article并入Issue中，增加字段Type用于区分。在此文档中Issue对象泛指问题（issue）和文章（article），进而形成如下APIs。
 
-* 关于pub_date的格式，一个例子是："2019-05-24 14:36"
+* 在下述APIs中，若err_code为-1，则data一律为空，即no data。
+
+* 凡是以登录为前提的操作，后端实现中会包含检测是否登录的逻辑。以创建问题为例，在调用相应API发送问题的内容时，若未登录，则不会创建问题，此时返回err_code=-1，message是类似于“当前未登录”的提示语句。
+
+* pub_date的格式是“Y-M-D h:m"，一个例子是："2019-05-24 14:36"
 
 * 不足之处：欠缺图像上传的APIs、Issue暂时未考虑标签
 
@@ -243,9 +247,10 @@ no data
 {
 	"err_code": <int, 0 means success, -1 means fail>,
 	"message": <str, tell user success or failure details>,
-	"data": <str, 即username> or <no data>
+	"data": <str, 即username>
 }
 ```
+**Note:** 若当前无登录用户，则err_code=-1，此时data为空，即no data.
 
 ### 9. POST /account/ask_user/
 
@@ -265,7 +270,7 @@ no data
 {
 	"err_code": <int, 0 means success, -1 means fail>,
 	"message": <str, tell user success or failure details>,
-	"data": <user> or <no data>
+	"data": <user>
 }
 ```
 
