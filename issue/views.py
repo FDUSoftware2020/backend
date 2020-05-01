@@ -200,7 +200,7 @@ def answer_list(request, issue_id):
         issue = Issue.objects.get(id=issue_id)
         user = backend_ask_login_user(request)
         obj_list = []
-        for answer in issue.answer_set.all().order_by("pub_date"):
+        for answer in issue.answer_set.all().order_by("-pub_date"):
             obj = conduct_detail_answer(answer, user)
             obj_list.append(obj)
         response_content = {"err_code":0, "message":"查询成功", "data":obj_list}

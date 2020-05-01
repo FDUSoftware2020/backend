@@ -5,6 +5,7 @@ from .models import Issue, Answer
 
 class AnswerInline(admin.TabularInline):
     model = Answer
+    fields = ['replier', 'pub_date', 'content']
     extra = 0
 
 class IssueAdmin(admin.ModelAdmin):

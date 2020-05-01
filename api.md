@@ -548,7 +548,7 @@ no data
 }
 ```
 
-**Note:** answer_list即answer的列表，
+**Note:** answer_list即answer的列表，默认按照pub_date排序，最新者在前。
 
 ### 11. GET /issue/answer/&lt;int:answer_id&gt;/like/
 
