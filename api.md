@@ -658,8 +658,7 @@ no data
 ```json
 {
 	"target_type": <int, 1指article, 2指answer, 3指comment>,
-	"target_id": <int, 目标的ID>，
-	"content": <str, 评论的详细内容>
+	"target_id": <int, 目标的ID>
 }
 ```
 
