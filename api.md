@@ -73,6 +73,7 @@
 * 不足之处：欠缺图像上传的APIs、Issue暂时未考虑标签
 
 
+
 ## Account APIs
 
 定义用户相关的APIs，具体有：注册、登录、登出、验证、修改密码、修改用户名、查询用户信息
@@ -392,6 +393,7 @@ no data
 ```
 
 **Note:** 搜索的结果可能含有大量的Issue对象，直接返回Issue的全部内容须耗费较多带宽。因此，返回brief_issue_list即brief_issue的列表,其中brief_issue是字典类型，如下所示。注意：后端默认排序方式是title的字符顺序，故提供其他字段以便前端改变排序方式。
+
 ```
 {
 	"id": <int>,
@@ -582,7 +584,8 @@ no data
 ```json
 {
 	"target_type": <int, 1指article, 2指answer, 3指comment>,
-	"target_id": <int, 目标的ID>，
+	"target_id": <int, 目标的ID>,
+    "parent_comment_id": <int, 所属父评论（一级评论）的id,如本身为一级评论则传入-1>,
 	"content": <str, 评论的详细内容>
 }
 ```
@@ -663,6 +666,25 @@ no data
 ```
 
 **Note:** 由于可以对Article、Answer、Comment三者进行评论，因此需要使用target_type加以区分。
+
+注意：此处如果是对Article或者Answer获取评论，则会返回所有的一级评论。
+
+如果是对Comment获取评论，返回的是以该comment作为父评论的所有评论。
+
+因此，对于一篇回答或者文章，需要先获取一级评论，然后对每条一级评论获取各自的所有二级评论。
+
+>   形如：
+>
+>   -   Article A
+>       -   一级评论11 reply to Article A
+>           -   二级评论21 reply to 一级评论11
+>           -   二级评论22 reply to 二级评论21
+>
+>   对于评论11来说，target_type是1，target_id是Article A 的id, parent_comment_id = -1
+>
+>   而对于评论21来说，target_type是3，target_id是一级评论11的id, parent_comment_id = 11的id
+>
+>   而对于评论22来说，target_type是3，target_id是二级评论21的id, parent_comment_id = 11的id
 
 #### 4.2 response format
 
