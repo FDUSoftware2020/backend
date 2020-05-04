@@ -12,10 +12,14 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     # ex: /account/verify
 	path('verify/', views.verify, name='verify'),
-    # ex: /account/modify_username
-	path('modify_username/', views.modify_username, name='modify_username'),
     # ex: /account/modify_password
 	path('modify_password/', views.modify_password, name='modify_password'),
+    # ex: /account/modify_username
+	path('modify_username/', views.modify_username, name='modify_username'),
+    # ex: /account/modify_signature
+	path('modify_signature/', views.modify_signature, name='modify_signature'),
+    # ex: /account/ask_login_user
+	path('ask_login_user/', views.ask_login_user, name='ask_login_user'),
     # ex: /account/ask_user
 	path('ask_user/', views.ask_user, name='ask_user'),
 ]

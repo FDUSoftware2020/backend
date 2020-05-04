@@ -18,11 +18,11 @@ def register(request):
     '''
 
     if request.method == "POST":
-        content = json.loads(request.body)
-        username = content.get("username")
-        email = content.get("email")
-        password = content.get("password")
-        code = content.get("verification")
+        data = json.loads(request.body)
+        username = data.get("username")
+        email = data.get("email")
+        password = data.get("password")
+        code = data.get("verification")
         # try registering
         if username == "" or email == "" or password == "" or code == "":
             content = {"err_code":-1, "message":"用户名、邮箱、密码或验证码为空", "data":None}
@@ -52,19 +52,19 @@ def login(request):
     '''
 
     if request.method == "POST":
-        content = json.loads(request.body)
-        username = content.get("username")
-        password = content.get("password")
-        if ask_login_user(request):
+        data = json.loads(request.body)
+        username = data.get("username")
+        password = data.get("password")
+        user = backend_ask_user(username, password)
+        if backend_ask_login_user(request):
             content = {"err_code":-1, "message":"当前已登录，请先退出登录", "data":None}
             return HttpResponse(json.dumps(content))
-        elif not User.objects.filter(username=username, password=password).exists():
+        elif not user:
             content = {"err_code":-1, "message":"用户名或密码错误", "data":None}
             return HttpResponse(json.dumps(content))
         else:
             cookie_value = make_cookie()
             # save cookie_value in user
-            user = User.objects.filter(username=username, password=password)[0]
             user.cookie_value = cookie_value
             user.save()
             # conduct response
@@ -87,7 +87,7 @@ def logout(request):
         An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
     '''
     
-    if not ask_login_user(request):
+    if not backend_ask_login_user(request):
         content = {"err_code":-1, "message":"当前未登录", "data":None}
         return HttpResponse(json.dumps(content))
     else:
@@ -108,8 +108,8 @@ def verify(request):
     '''
 
     if request.method == "POST":
-        content = json.loads(request.body)
-        email = content.get("email")
+        data = json.loads(request.body)
+        email = data.get("email")
         if email == "":
             content = {"err_code":-1, "message":"邮箱为空", "data":None}
         else:
@@ -128,36 +128,6 @@ def verify(request):
     return HttpResponse(json.dumps(content))
 
 
-def modify_username(request):
-    ''' 修改用户名, 须以POST方式
-
-    Arguments:
-        request: It should contains {"username":<str>} in the body.
-    
-    Return:
-        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
-    '''
-
-    if request.method == "POST":
-        content = json.loads(request.body)
-        username = content.get("username")
-        user = ask_login_user(request)
-        if not user:
-            content = {"err_code":-1, "message":"当前未登录", "data":None}
-        elif username == "":
-            content = {"err_code":-1, "message":"用户名为空", "data":None}
-        elif User.objects.filter(username=username).exists():
-            content = {"err_code":-1, "message":"该用户名已存在", "data":None}
-        else:
-            user.username = username
-            user.save()
-            content = {"err_code":0, "message":"用户名修改成功", "data":None}
-    else:
-        content = {"err_code":-1, "message":"请求方式错误", "data":None}
-    
-    return HttpResponse(json.dumps(content))
-
-
 def modify_password(request):
     ''' 修改密码, 须以POST方式
 
@@ -169,10 +139,10 @@ def modify_password(request):
     '''
 
     if request.method == "POST":
-        content = json.loads(request.body)
-        email = content.get("email")
-        password = content.get("password")
-        code = content.get("verification")
+        data = json.loads(request.body)
+        email = data.get("email")
+        password = data.get("password")
+        code = data.get("verification")
         if email == "" or password == "" or code == "":
             content = {"err_code":-1, "message":"邮箱、密码或验证码为空", "data":None}
         elif not check_verification_code(email, code):
@@ -191,19 +161,98 @@ def modify_password(request):
     return HttpResponse(json.dumps(content))
 
 
+def modify_username(request):
+    ''' 修改用户名, 须以POST方式
+
+    Arguments:
+        request: It should contains {"username":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
+    '''
+
+    if request.method == "POST":
+        data = json.loads(request.body)
+        username = data.get("username")
+        user = backend_ask_login_user(request)
+        if not user:
+            content = {"err_code":-1, "message":"当前未登录", "data":None}
+        elif username == "":
+            content = {"err_code":-1, "message":"用户名为空", "data":None}
+        elif User.objects.filter(username=username).exists():
+            content = {"err_code":-1, "message":"该用户名已存在", "data":None}
+        else:
+            user.username = username
+            user.save()
+            content = {"err_code":0, "message":"用户名修改成功", "data":None}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
+
+
+def modify_signature(request):
+    ''' 个性签名, 须以POST方式
+
+    Arguments:
+        request: It should contains {"signature":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":None}
+    '''
+
+    if request.method == "POST":
+        content = json.loads(request.body)
+        signature = content.get("signature")
+        user = backend_ask_login_user(request)
+        if not user:
+            content = {"err_code":-1, "message":"当前未登录", "data":None}
+        else:
+            user.signature = signature
+            user.save()
+            content = {"err_code":0, "message":"个性签名修改成功", "data":None}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
+
+
 def ask_user(request):
+    ''' 查询用户信息，仅返回非安全相关信息
+
+    Arguments:
+        request: It should contains {"username":<str>} in the body.
+    
+    Return:
+        An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":user}
+    '''
+    if request.method == "POST":
+        data = json.loads(request.body)
+        username = data.get("username")
+        if not User.objects.filter(username=username).exists():
+            content = {"err_code":-1, "message":"该用户名不存在", "data":None}
+        else:
+            obj = User.objects.filter(username=username)[0]
+            user = {"username":obj.username, "email":obj.email, "signature":obj.signature, "contribution":obj.contribution}
+            content = {"err_code":-1, "message":"成功查询用户信息", "data":user}
+    else:
+        content = {"err_code":-1, "message":"请求方式错误", "data":None}
+    
+    return HttpResponse(json.dumps(content))
+
+
+def ask_login_user(request):
     ''' 查询当前登录用户，仅用于前端处理
 
     Return:
         An HttpRepsonse, which contains {"err_code":<int>, "message":<str>, "data":user or None}
     '''
 
-    obj = ask_login_user(request)
+    obj = backend_ask_login_user(request)
     if not obj:
         content = {"err_code":-1, "message":"当前未登录", "data":None}
     else:
-        user = {"username":obj.username, "email":obj.email}
-        content = {"err_code":0, "message":"查询成功", "data":user}
+        content = {"err_code":0, "message":"查询成功", "data":obj.username}
     return HttpResponse(json.dumps(content))
     
 
@@ -241,6 +290,7 @@ def save_verification_code(email, code):
         obj.make_time = timezone.now()
         obj.save()
 
+
 def check_verification_code(email, code):
     ''' 核对验证码
     
@@ -258,7 +308,7 @@ def check_verification_code(email, code):
             return True
 
 
-def ask_login_user(request):
+def backend_ask_login_user(request):
     ''' 查询当前登录用户，仅用于后端处理
 
     Return:
@@ -274,3 +324,18 @@ def ask_login_user(request):
             return None
         else:
             return User.objects.filter(cookie_value=cookie_value)[0]
+
+
+def backend_ask_user(username, password):
+    ''' 若存在返回相应的用户，否则返回None
+
+    Arguments:
+        username: 用户名或邮箱地址
+        password: 密码
+    '''
+    if User.objects.filter(username=username, password=password).exists():
+        return User.objects.filter(username=username, password=password)[0]
+    elif User.objects.filter(email=username, password=password).exists():
+        return User.objects.filter(email=username, password=password)[0]
+    else:
+        return None

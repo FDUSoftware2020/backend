@@ -10,6 +10,8 @@ class User(models.Model):
     email = models.CharField(max_length=100, unique=True)         # 学邮
     password = models.CharField(max_length=100, default="")       # 密码
     cookie_value = models.CharField(max_length=200 , default="")  # cookie值
+    signature = models.TextField(default="他(她)什么也没留下~")     # 个性签名
+    contribution = models.PositiveIntegerField(default=0)         # 贡献值
     
     def __str__(self):
         return self.username
