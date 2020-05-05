@@ -47,11 +47,13 @@
 	-   [4. POST /issue/search/](#4-post-issuesearch)
 	-   [5. GET /issue/&lt;int:issue_id&gt;/collect/](#5-get-issue&lt;int:issue_id&gt;collect)
 	-   [6. GET /issue/collection_list/](#6-get-issuecollection_list)
-	-   [7. GET /issue/&lt;int:issue_id&gt;/like/](#7-get-issue&lt;int:issue_id&gt;like)
-	-   [8. POST /issue/&lt;int:issue_id&gt;/answer/create/](#8-post-issue&lt;int:issue_id&gt;answercreate)
-	-   [9. GET /issue/answer/&lt;int:answer_id&gt;/delete/](#9-get-issueanswer&lt;int:answer_id&gt;delete)
-	-   [10. GET /issue/&lt;int:issue_id&gt;/answer_list/](#10-get-issue&lt;int:issue_id&gt;answer_list)
-    -   [11. GET /issue/answer/&lt;int:answer_id&gt;/like/](#11-get-issueanswer&lt;int:answer_id&gt;like)
+	-   [7. GET /issue/publication_list/](#7-get-issuepublication_list)
+	-   [8. GET /issue/&lt;int:issue_id&gt;/like/](#8-get-issue&lt;int:issue_id&gt;like)
+	-   [9. POST /issue/&lt;int:issue_id&gt;/answer/create/](#9-post-issue&lt;int:issue_id&gt;answercreate)
+	-   [10. GET /issue/answer/&lt;int:answer_id&gt;/delete/](#10-get-issueanswer&lt;int:answer_id&gt;delete)
+	-   [11. GET /issue/answer/&lt;int:answer_id&gt;/detail/](#11-get-issueanswer&lt;int:answer_id&gt;detail)
+	-   [12. GET /issue/&lt;int:issue_id&gt;/answer_list/](#12-get-issue&lt;int:issue_id&gt;answer_list)
+    -   [13. GET /issue/answer/&lt;int:answer_id&gt;/like/](#13-get-issueanswer&lt;int:answer_id&gt;like)
 -   [Comment APIs](#Comment-APIs)
     -   [1. POST /comment/create/](#1-post-commentcreate)
 	-   [2. GET /comment/&lt;int:comment_id&gt;/delete/](#2-get-comment&lt;int:comment_id&gt;delete)
@@ -70,7 +72,7 @@
 
 * pub_date的格式是“Y-M-D h:m"，一个例子是："2019-05-24 14:36"
 
-* 不足之处：欠缺图像上传的APIs、Issue暂时未考虑标签
+* 不足之处：Issue暂时未考虑标签
 
 
 
@@ -431,9 +433,9 @@ no data
 }
 ```
 
-### 7. GET /issue/&lt;int:issue_id&gt;/like/
+### 7. GET /issue/publication_list/
 
-**Description:** 点赞/取消点赞某个issue，须处于登录状态。
+**Description:** 获取当前登录用户发布的Issue列表，须处于登录状态。
 
 #### 7.1 request format
 
@@ -445,21 +447,17 @@ no data
 {
 	"err_code": <int, 0 means success, -1 means fail>,
 	"message": <str, tell user success or failure details>,
-	"data": <no data>
+	"data": <brief_issue_list>
 }
 ```
 
-### 8. POST /issue/&lt;int:issue_id&gt;/answer/create/
+### 8. GET /issue/&lt;int:issue_id&gt;/like/
 
-**Description:** 新建对某个Issue的回答，其中issue_id指明是哪个issue，须处于登录状态
+**Description:** 点赞/取消点赞某个issue，须处于登录状态。
 
 #### 8.1 request format
 
-```json
-{
-	"content": <str, 回答的内容>
-}
-```
+no data
 
 #### 8.2 response format
 
@@ -471,13 +469,17 @@ no data
 }
 ```
 
-### 9. GET /issue/answer/&lt;int:answer_id&gt;/delete/
+### 9. POST /issue/&lt;int:issue_id&gt;/answer/create/
 
-**Description:** 删除某个回答，其中answer_id指明是哪个answer，须处于登录状态
+**Description:** 新建对某个Issue的回答，其中issue_id指明是哪个issue，须处于登录状态
 
 #### 9.1 request format
 
-no data
+```json
+{
+	"content": <str, 回答的内容>
+}
+```
 
 #### 9.2 response format
 
@@ -489,15 +491,33 @@ no data
 }
 ```
 
-### 10. GET /issue/answer/&lt;int:answer_id&gt;/detail
+### 10. GET /issue/answer/&lt;int:answer_id&gt;/delete/
 
-**Description:** 获取某个answer的详细信息
+**Description:** 删除某个回答，其中answer_id指明是哪个answer，须处于登录状态
 
-#### 9.1 request format
+#### 10.1 request format
 
 no data
 
-#### 9.2 response format
+#### 10.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <no data>
+}
+```
+
+### 11. GET /issue/answer/&lt;int:answer_id&gt;/detail
+
+**Description:** 获取某个answer的详细信息
+
+#### 11.1 request format
+
+no data
+
+#### 11.2 response format
 
 ```json
 {
@@ -521,15 +541,15 @@ no data
 }
 ```
 
-### 10. GET /issue/&lt;int:issue_id&gt;/answer_list/
+### 12. GET /issue/&lt;int:issue_id&gt;/answer_list/
 
 **Description:** 获取某个Issue的回答列表
 
-#### 10.1 request format
+#### 12.1 request format
 
 no data
 
-#### 10.2 response format
+#### 12.2 response format
 
 ```json
 {
@@ -541,15 +561,15 @@ no data
 
 **Note:** answer_list即answer的列表，默认按照pub_date排序，最新者在前。
 
-### 11. GET /issue/answer/&lt;int:answer_id&gt;/like/
+### 13. GET /issue/answer/&lt;int:answer_id&gt;/like/
 
 **Description:** 对某个answer点赞/取消点赞，其中answer_id指明是哪个answer，须处于登录状态
 
-#### 11.1 request format
+#### 13.1 request format
 
 no data
 
-#### 11.2 response format
+#### 13.2 response format
 
 ```json
 {
@@ -702,5 +722,49 @@ no data
 	"err_code": <int, 0 means success, -1 means fail>,
 	"message": <str, tell user success or failure details>,
 	"data": <no data>
+}
+```
+
+## Image APIs
+
+### 1. POST /image/upload/
+
+**Description:** 单批次统一上传一组图片，后端进行存储，并返回这些图片的url。
+
+### 1.1 request format
+
+```json
+{
+	"img_list":<dictionary, 即图片组>
+}
+```
+
+**note:** img_list字段是字典类型，结构如下：
+
+```
+{
+    img_index_1: img_file_1,
+	img_index_2: img_file_2,
+	...
+}
+```
+
+### 1.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <dictionary, give url list>
+}
+```
+
+**note:** data字段是字典类型，结构如下。注：img_index_i是关键字变量；img_file_i是数据文件；img_url_i是对应的url(string类型)。响应报文中的img_index_i同请求报文中的img_index_i相对应。
+
+```
+{
+	img_index_1: img_url_1,
+	img_index_2: img_url_2,
+	...
 }
 ```

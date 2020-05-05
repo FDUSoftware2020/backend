@@ -53,7 +53,7 @@ def issue_detail(request, issue_id):
     try:
         issue = Issue.objects.get(id=issue_id)
         user = backend_ask_login_user(request)
-        obj = conduct_detail_issue(issue, user)
+        obj = conduct_issue(issue, user)
         response_content = {"err_code":0, "message":"查询成功", "data":obj}
     except Issue.DoesNotExist:
         response_content = {"err_code":-1, "message":"该问题/文章不存在", "data":None}
@@ -68,9 +68,10 @@ def issue_search(request):
         data = json.loads(request.body)
         keyword = data.get("keyword")
         issue_list = Issue.objects.filter(title__icontains=keyword).order_by('title')
+        user = backend_ask_login_user(request)
         obj_list = []
         for issue in issue_list:
-            obj = conduct_brief_issue(issue)
+            obj = conduct_issue(issue, user, brief=True)
             obj_list.append(obj)
         response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
     else:
@@ -108,8 +109,24 @@ def issue_collection_list(request):
         response_content = {"err_code":-1, "message":"当前未登录", "data":None}
     else:
         obj_list = []
-        for issue in user.issue_set.all().order_by('title'):
-            obj = conduct_brief_issue(issue)
+        for issue in user.collect_issue.all().order_by('title'):
+            obj = conduct_issue(issue, user, brief=True)
+            obj_list.append(obj)
+        response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
+
+    return HttpResponse(json.dumps(response_content))
+
+
+def issue_publication_list(request):
+    ''' 获取登录用户的发布列表
+    '''
+    user = backend_ask_login_user(request)
+    if not user:
+        response_content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        obj_list = []
+        for issue in user.create_issue.all().order_by('title'):
+            obj = conduct_issue(issue, user, brief=True)
             obj_list.append(obj)
         response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
 
@@ -250,8 +267,8 @@ def backend_ask_login_user(request):
             return User.objects.filter(cookie_value=cookie_value)[0]
 
 
-def conduct_detail_issue(issue, user):
-    ''' 构造详细版Issue实例
+def conduct_issue(issue, user, brief=False):
+    ''' 构造Issue实例，其中brief控制是否是简洁版
     '''
     # static data
     ID = issue.id
@@ -259,7 +276,10 @@ def conduct_detail_issue(issue, user):
     title = issue.title
     author = issue.author.username
     pub_date = str(issue.pub_date)[0:16]
-    content = issue.content
+    if brief:
+        content = issue.content[0:50]
+    else:
+        content = issue.content
     collect_num = issue.collectors.count()
     like_num = issue.likers.count()
     # dynamic data
@@ -272,13 +292,6 @@ def conduct_detail_issue(issue, user):
     
     return {"id":ID, "type":Type, "title":title, "author":author, "pub_date":pub_date, "content":content, \
             "collect_num":collect_num, "like_num":like_num, "IsCollecting":IsCollecting, "IsLiking":IsLiking}
-
-
-def conduct_brief_issue(issue):
-    ''' 构造简洁版Issue实例
-    '''
-    return {"id":issue.id, "type":issue.Type, "title":issue.title, "author":issue.author.username, "pub_date":str(issue.pub_date)[0:16], \
-            "collect_num":issue.collectors.count(), "like_num":issue.likers.count()}
 
 
 def conduct_detail_answer(answer, user):

@@ -16,6 +16,8 @@ urlpatterns = [
     path('<int:issue_id>/collect/', views.issue_collect, name='issue_collect'),
     # ex: /issue/collection_list/
     path('collection_list/', views.issue_collection_list, name='issue_collection_list'),
+    # ex: /issue/publication_list/
+    path('publication_list/', views.issue_publication_list, name='issue_publication_list'),
     # ex: /issue/2/like/
     path('<int:issue_id>/like/', views.issue_like, name='issue_like'),
     # ex: /issue/2/answer/create/
