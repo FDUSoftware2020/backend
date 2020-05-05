@@ -60,7 +60,8 @@
 	-   [3. GET /comment/&lt;int:comment_id&gt;/detail/](#3-get-comment&lt;int:comment_id&gt;detail)
 	-   [4. POST /comment/list/](#4-post-commentlist)
 	-   [5. GET /comment/&lt;int:comment_id&gt;/like/](#5-get-comment&lt;int:comment_id&gt;like)
-
+-   [Image APIs](#Image-APIs)
+    -   [1. POST /image/upload/](#1-post-imageupload)
 
 ## Preface
 
