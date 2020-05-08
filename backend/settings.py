@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'issue.apps.IssueConfig',
     'comment.apps.CommentConfig',
+    'image.apps.ImageConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,10 +123,15 @@ USE_TZ = True
 DATE_FORMAT = 'Y-m-d'
 DATETIME_FORMAT = 'Y-m-d H:i:s'
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Media Setting
+UPLOAD_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 
 # Email setting

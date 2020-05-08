@@ -277,7 +277,7 @@ def conduct_issue(issue, user, brief=False):
     author = issue.author.username
     pub_date = str(issue.pub_date)[0:16]
     if brief:
-        content = issue.content[0:50]
+        content = issue.content[0:50] + "......"
     else:
         content = issue.content
     collect_num = issue.collectors.count()

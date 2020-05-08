@@ -734,7 +734,7 @@ no data
 
 ### 1.1 request format
 
-```json
+```
 {
 	"img_list":<dictionary, 即图片组>
 }
