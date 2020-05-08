@@ -736,19 +736,13 @@ no data
 
 ```
 {
-	"img_list":<dictionary, 即图片组>
-}
-```
-
-**note:** img_list字段是字典类型，结构如下：
-
-```
-{
     img_index_1: img_file_1,
 	img_index_2: img_file_2,
 	...
 }
 ```
+
+**note:** 图片组须直接以formdata格式传输，外部不嵌套任何封装。
 
 ### 1.2 response format
 
