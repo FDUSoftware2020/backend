@@ -18,6 +18,9 @@ class Issue(models.Model):
     collectors = models.ManyToManyField('account.User', related_name='collect_issue')                    # 收藏者
     likers = models.ManyToManyField('account.User', related_name='like_issue')                           # 点赞者
 
+    def __str__(self):
+        return str(self.id)
+
 
 class Answer(models.Model):
     ''' 定义Answer类，即对Issue的回答
@@ -28,3 +31,6 @@ class Answer(models.Model):
     content = models.TextField()                                                       # 回答的内容
     likers = models.ManyToManyField('account.User', related_name='like_answer')        # 点赞者
 
+    def __str__(self):
+        return str(self.id)
+    

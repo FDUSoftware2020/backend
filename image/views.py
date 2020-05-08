@@ -40,34 +40,6 @@ def upload(request):
     return HttpResponse(json.dumps(response_content))
 
 
-def pupload(request):
-    ''' 图片上传,适用于Postman
-    '''
-    if request.method == "POST":
-        user = backend_ask_login_user(request)
-        print("post is ", request.POST)
-        test_file = request.POST.get('test', None)
-        print("test_file is ", test_file)
-        img_file = request.FILES.get('img', None)
-        print("img_file is ", img_file)
-        if not user:
-            response_content = {"err_code":-1, "message":"当前未登录", "data":None}
-        elif not img_file:
-            response_content = {"err_code":-1, "message":"数据格式错误", "data":None}
-        else:
-            img_name = timezone.now().strftime('%Y%M%d%H%M%S%f') + ".jpg"
-            f = open(os.path.join(settings.UPLOAD_ROOT, img_name), 'wb')
-            for i in img_file.chunks():
-                f.write(i)
-                f.close()
-            img_url = HOST + "/uploads/" + img_name
-            response_content = {"err_code":0, "message":"图片上传成功", "data":img_url}
-    else:
-        response_content = {"err_code":-1, "message":"请求方式错误", "data":None}
-    
-    return HttpResponse(json.dumps(response_content))
-
-
 # some assist functions
 
 def backend_ask_login_user(request):

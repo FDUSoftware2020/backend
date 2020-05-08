@@ -26,4 +26,4 @@ class VerificationCode(models.Model):
     make_time = models.DateTimeField()                     # 验证码生成时刻
 
     def __str__(self):
-        return self.email
+        return str(self.id)
