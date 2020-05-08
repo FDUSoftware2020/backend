@@ -8,7 +8,8 @@ from account.models import User
 
 # Create your views here.
 
-HOST = "http://127.0.0.1:8000"
+# HOST = "http://127.0.0.1:8000"
+HOST = "http://182.92.131.202:8000"
 
 
 def upload(request):
@@ -16,17 +17,14 @@ def upload(request):
     '''
     if request.method == "POST":
         user = backend_ask_login_user(request)
-        img_list = request.data.get("img_list", None)
         if not user:
             response_content = {"err_code":-1, "message":"当前未登录", "data":None}
-        elif not img_list:
-            response_content = {"err_code":-1, "message":"数据格式错误", "data":None}
         else:
-            index_list = img_list.keys()
-            print("index_list is ", index_list)
+            files_list = request.FILES
+            index_list = files_list.keys()
             url_list = {}
             for img_index in index_list:
-                img_file = img_list[img_index]
+                img_file = files_list[img_index]
                 img_name = timezone.now().strftime('%Y%M%d%H%M%S%f') + ".jpg"
                 if all([img_index, img_file]):
                     f = open(os.path.join(settings.UPLOAD_ROOT, img_name), 'wb')

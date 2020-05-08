@@ -5,5 +5,5 @@ app_name = 'image'
 
 urlpatterns = [
     # ex: /image/upload/
-	path('upload/', views.pupload, name='upload'),
+	path('upload/', views.upload, name='upload'),
 ]
