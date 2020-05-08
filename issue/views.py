@@ -166,8 +166,11 @@ def answer_create(request, issue_id):
         else:
             try:
                 issue = Issue.objects.get(id=issue_id)
-                Answer.objects.create(issue=issue, replier=user, pub_date=timezone.now(), content=content)
-                response_content = {"err_code":0, "message":"回答已发布", "data":None}
+                if issue.Type != Issue.IssueType.ISSUE:
+                    response_content = {"err_code":-1, "message":"无法对文章进行回答", "data":None}
+                else:
+                    Answer.objects.create(issue=issue, replier=user, pub_date=timezone.now(), content=content)
+                    response_content = {"err_code":0, "message":"回答已发布", "data":None}
             except Issue.DoesNotExist:
                 response_content = {"err_code":-1, "message":"该问题不存在", "data":None}
     else:
