@@ -2,6 +2,7 @@ import json
 from django.http import HttpResponse
 from django.utils import timezone
 from account.models import User
+from comment.models import Comment
 from .models import Issue, Answer
 
 # Create your views here.
@@ -298,6 +299,16 @@ def conduct_issue(issue, user, brief=False):
             "collect_num":collect_num, "like_num":like_num, "IsCollecting":IsCollecting, "IsLiking":IsLiking}
 
 
+def compute_comment_num_of_answer(answer):
+    ''' 统计an answer下的评论数目
+    '''
+    C1_list = Comment.objects.filter(object_id=answer.id)
+    comment_num = len(C1_list)
+    for c1 in C1_list:
+        comment_num += Comment.objects.filter(parent_comment=c1.id).count()
+    return comment_num
+
+
 def conduct_detail_answer(answer, user):
     ''' 构造详细版Answer实例
     '''
@@ -310,7 +321,7 @@ def conduct_detail_answer(answer, user):
         IsLiking = False
     else:
         IsLiking = not (len(answer.likers.filter(id=user.id)) == 0)
-    comment_num = 0
+    comment_num = compute_comment_num_of_answer(answer)
 
     return {"id":ID, "author":author, "pub_date":pub_date, "content":content, \
             "like_num":like_num, "IsLiking":IsLiking, "comment_num":comment_num}
