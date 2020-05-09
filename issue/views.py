@@ -19,8 +19,9 @@ def issue_create(request):
         if not author:
             response_content = {"err_code":-1, "message":"当前未登录", "data":None}
         else:
-            Issue.objects.create(Type=Type, title=title, author=author, pub_date=pub_date, content=content)
-            response_content = {"err_code":0, "message":"发布成功", "data":None}
+            issue = Issue(Type=Type, title=title, author=author, pub_date=pub_date, content=content)
+            issue.save()
+            response_content = {"err_code":0, "message":"发布成功", "data":issue.id}
     else:
         response_content = {"err_code":-1, "message":"请求方式错误", "data":None}
     

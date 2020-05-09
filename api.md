@@ -316,7 +316,7 @@ no data
 {
 	"err_code": <int, 0 means success, -1 means fail>,
 	"message": <str, tell user success or failure details>,
-	"data": <no data>
+	"data": <int, id of the new issue when it is successful>
 }
 ```
 
