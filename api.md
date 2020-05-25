@@ -40,6 +40,9 @@
 	-   [7. POST /account/modify_signature/](#7-post-accountmodify_signature)
     -   [8. GET /account/ask_login_user/](#7-get-accountask_login_user)
 	-   [9. POST /account/ask_user/](#9-post-accountask_user)
+	-   [10. GET /account/message/list/](#10-get-accountmessagelist)
+	-   [11. GET /account/message/&lt;int:msg_id&gt;/read/](#11-get-accountmessage&lt;int:msg_id&gt;read)
+	-   [12. GET /account/message/&lt;int:msg_id&gt;/delete/](#12-get-accountmessage&lt;int:msg_id&gt;delete)
 -   [Issue APIs](#Issue-APIs)
     -   [1. POST /issue/create/](#1-post-issuecreate)
     -   [2. GET /issue/&lt;int:issue_id&gt;/delete/](#2-get-issue&lt;int:issue_id&gt;delete)
@@ -286,6 +289,81 @@ no data
     "email": <str, 邮箱>,
 	"signature": <str, 个性签名>,
 	"contribution": <int, 贡献值>
+}
+```
+
+### 10. GET/account/message/list/
+
+**Description:** 获取通知消息列表，须处于登录状态
+
+#### 10.1 request format
+
+no data
+
+#### 10.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": a list of 'message'
+}
+```
+
+**note:** message是消息的结构体，字典类型，具体字段如下。有五种消息：问题新增回答、文章新增评论、回答新增评论
+
+* 问题新增回答：type = 1, issue_id是被回答的问题；answer_id是该新增回答；parent_comment_id = comment_id = -1
+* 文章新增评论：type = 2, issue_id是被评论的文章；answer_id = -1；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
+* 回答新增评论：type = 3, issue_id是对应问题；answer_id是对应回答；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
+
+```
+{
+	"msg_id": <int, 消息的id>,
+    "type": <int, 消息类型>,
+	"issue_id": <int>,
+	"answer_id": <int>,
+	"parent_comment_id": <int>,
+	"comment_id": <int>,
+	"from": <str, 回复者的用户名>,
+	"to": <str, 被回复者的用户名>,
+	"pub_date": <str, 回复时间>,
+    "IsReading": <bool, 是否已读>
+}
+```
+
+### 11. GET /account/message/&lt;int:msg_id&gt;/read/
+
+**description:** 将某条通知消息标记为已读，须处于登录状态
+
+#### 11.1 request format
+
+no data
+
+#### 11.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <no data>
+}
+```
+
+### 12. GET /account/message/&lt;int:msg_id&gt;/delete/
+
+**description:** 删除某条通知消息，须处于登录状态
+
+#### 12.1 request format
+
+no data
+
+#### 12.2 response format
+
+```json
+{
+	"err_code": <int, 0 means success, -1 means fail>,
+	"message": <str, tell user success or failure details>,
+	"data": <no data>
 }
 ```
 
@@ -707,6 +785,7 @@ no data
 ```
 
 **Note:** comment_list即comment对象的列表。至于列表内是否“良好排序”，待定。
+
 
 ### 5. GET /comment/&lt;int:comment_id&gt;/like/
 
