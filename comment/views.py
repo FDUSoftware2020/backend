@@ -2,10 +2,11 @@ from django.shortcuts import render
 import json
 from django.http import HttpResponse
 from django.utils import timezone
-from account.models import User
+from django.contrib.contenttypes.models import ContentType
+from account.models import User, Message
 from issue.models import Issue, Answer
 from .models import Comment
-
+from account.utils.message import create_message
 
 # Create your views here.
 
@@ -40,8 +41,10 @@ def comment_create(request):
                 content_object = Comment.objects.get(id=object_id)
                 to_user = content_object.from_id
             content = data.get("content")
-            Comment.objects.create(from_id=from_user, to_id=to_user, pub_date=pub_date, content=content,
+            comment = Comment(from_id=from_user, to_id=to_user, pub_date=pub_date, content=content,
                                    content_object=content_object, parent_comment=parent_comment)
+            comment.save()
+            create_message_for_comment(type, comment)
             response_content = {"err_code": 0, "message": "发布成功", "data": None}
     else:
         response_content = {"err_code": -1, "message": "请求方式错误", "data": None}
@@ -100,11 +103,13 @@ def comment_list(request):
         data = json.loads(request.body)
         target_type = int(data.get("target_type"))
         target_id = int(data.get("target_id"))
+        issue_ct = ContentType.objects.get_for_model(Issue)
+        answer_ct = ContentType.objects.get_for_model(Answer)
         if target_type == 1:
             try:
                 user = backend_ask_login_user(request)
                 obj_list = []
-                for comment in Comment.objects.filter(object_id=target_id).order_by("-pub_date"):
+                for comment in Comment.objects.filter(content_type=issue_ct, object_id=target_id).order_by("-pub_date"):
                     obj = conduct_detail_comment(comment, user)
                     obj_list.append(obj)
                 response_content = {"err_code": 0, "message": "查询成功", "data": obj_list}
@@ -114,7 +119,7 @@ def comment_list(request):
             try:
                 user = backend_ask_login_user(request)
                 obj_list = []
-                for comment in Comment.objects.filter(object_id=target_id).order_by("-pub_date"):
+                for comment in Comment.objects.filter(content_type=answer_ct, object_id=target_id).order_by("-pub_date"):
                     obj = conduct_detail_comment(comment, user)
                     obj_list.append(obj)
                 response_content = {"err_code": 0, "message": "查询成功", "data": obj_list}
@@ -205,3 +210,22 @@ def conduct_detail_comment(comment, user):
         "like_num": like_num,
         "IsLiking": IsLiking,
     }
+
+
+def create_message_for_comment(Type, comment):
+    ''' 为评论新建通知消息
+    Arguments:
+        Type: 1, 对文章添加评论；2，对回答添加评论；3，对评论添加评论
+    '''
+    issue_ct = ContentType.objects.get_for_model(Issue)
+    answer_ct = ContentType.objects.get_for_model(Answer)
+
+    if comment.content_type == issue_ct:
+        create_message(Message.MsgType.CommentToArticle, comment)
+    elif comment.content_type == answer_ct:
+        create_message(Message.MsgType.CommentToAnswer, comment)
+    elif comment.parent_comment:
+        if comment.parent_comment.content_type == issue_ct:
+            create_message(Message.MsgType.CommentToArticle, comment)
+        elif comment.parent_comment.content_type == answer_ct:
+            create_message(Message.MsgType.CommentToAnswer, comment)

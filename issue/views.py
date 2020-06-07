@@ -1,9 +1,10 @@
 import json
 from django.http import HttpResponse
 from django.utils import timezone
-from account.models import User
-from comment.models import Comment
 from .models import Issue, Answer
+from account.models import User, Message
+from comment.models import Comment
+from account.utils.message import create_message
 
 # Create your views here.
 
@@ -171,7 +172,9 @@ def answer_create(request, issue_id):
                 if issue.Type != Issue.IssueType.ISSUE:
                     response_content = {"err_code":-1, "message":"无法对文章进行回答", "data":None}
                 else:
-                    Answer.objects.create(issue=issue, replier=user, pub_date=timezone.now(), content=content)
+                    answer = Answer(issue=issue, replier=user, pub_date=timezone.now(), content=content)
+                    answer.save()
+                    create_message(Message.MsgType.AnswerToIssue, answer)
                     response_content = {"err_code":0, "message":"回答已发布", "data":None}
             except Issue.DoesNotExist:
                 response_content = {"err_code":-1, "message":"该问题不存在", "data":None}

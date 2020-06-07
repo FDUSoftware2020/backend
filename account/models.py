@@ -27,3 +27,26 @@ class VerificationCode(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class Message(models.Model):
+    ''' 消息通知类
+    '''
+    class MsgType(models.IntegerChoices):
+        AnswerToIssue = 0
+        CommentToArticle = 1
+        CommentToAnswer = 2
+
+    Type = models.IntegerField(choices=MsgType.choices)
+    issue_id = models.IntegerField()
+    answer_id = models.IntegerField()
+    parent_comment_id = models.IntegerField()
+    comment_id = models.IntegerField()
+    from_uname = models.CharField(max_length=100, default="无名氏")
+    receiver = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rec_msg')
+    pub_date = models.DateTimeField()
+    content = models.TextField()
+    IsReading = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.id)

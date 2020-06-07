@@ -325,11 +325,14 @@ no data
 	"parent_comment_id": <int>,
 	"comment_id": <int>,
 	"from": <str, 回复者的用户名>,
-	"to": <str, 被回复者的用户名>,
 	"pub_date": <str, 回复时间>,
+	"content": <text, 后端自组织内容，描述行为>,
     "IsReading": <bool, 是否已读>
 }
 ```
+
+**Note:** 返回的消息列表按时间排序，最新者在前。
+
 
 ### 11. GET /account/message/&lt;int:msg_id&gt;/read/
 
@@ -366,6 +369,8 @@ no data
 	"data": <no data>
 }
 ```
+
+**Note:** 后端自带删除功能，已读消息7天后自动删除，未读消息30天后自动删除。
 
 
 ## Issue APIs
