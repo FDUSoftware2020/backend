@@ -236,7 +236,7 @@ def ask_user(request):
         else:
             obj = User.objects.filter(username=username)[0]
             user = {"username":obj.username, "email":obj.email, "signature":obj.signature, "contribution":obj.contribution}
-            content = {"err_code":-1, "message":"成功查询用户信息", "data":user}
+            content = {"err_code":0, "message":"成功查询用户信息", "data":user}
     else:
         content = {"err_code":-1, "message":"请求方式错误", "data":None}
     
