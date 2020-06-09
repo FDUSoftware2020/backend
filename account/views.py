@@ -3,7 +3,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.utils import timezone
-from .models import User, VerificationCode
+from .models import User, VerificationCode, Message
+from .utils.verification import make_verification_code, check_verification_code, save_verification_code
+from .utils.message import conduct_message
 
 # Create your views here.
 
@@ -234,7 +236,7 @@ def ask_user(request):
         else:
             obj = User.objects.filter(username=username)[0]
             user = {"username":obj.username, "email":obj.email, "signature":obj.signature, "contribution":obj.contribution}
-            content = {"err_code":-1, "message":"成功查询用户信息", "data":user}
+            content = {"err_code":0, "message":"成功查询用户信息", "data":user}
     else:
         content = {"err_code":-1, "message":"请求方式错误", "data":None}
     
@@ -256,6 +258,70 @@ def ask_login_user(request):
     return HttpResponse(json.dumps(content))
     
 
+def message_list(request):
+    ''' 获取消息通知列表，兼具删除过期通知消息
+    '''
+    user = backend_ask_login_user(request)
+    if not user:
+        content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        obj_list = user.rec_msg.all().order_by('-pub_date')
+        msg_list = []
+        for o in obj_list:
+            # 超过30天则自动删除
+            if timezone.now() > o.pub_date + datetime.timedelta(days=30):
+                o.delete()
+            # 已读且超过7天则自动删除
+            elif o.IsReading and timezone.now() > o.pub_date + datetime.timedelta(days=7):
+                o.delete()
+            else:
+                msg = conduct_message(o)
+                msg_list.append(msg)
+        content = {"err_code":0, "message":"消息获取成功", "data":msg_list}
+    return HttpResponse(json.dumps(content))
+
+
+def message_read(request, msg_id):
+    ''' 将某条消息标记为已读
+    '''
+    user = backend_ask_login_user(request)
+    if not user:
+        response_content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        try:
+            msg = Message.objects.get(id=msg_id)
+            if msg.receiver == user:
+                msg.IsReading = True
+                msg.save()
+                response_content = {"err_code":0, "message":"成功标记已读", "data":None}
+            else:
+                response_content = {"err_code":-1, "message":"您不是该通知消息的接收者，无法标记", "data":None}
+        except Message.DoesNotExist:
+            response_content = {"err_code":-1, "message":"该通知消息不存在", "data":None}
+    
+    return HttpResponse(json.dumps(response_content))
+
+
+def message_delete(request, msg_id):
+    ''' 删除某条消息
+    '''
+    user = backend_ask_login_user(request)
+    if not user:
+        response_content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        try:
+            msg = Message.objects.get(id=msg_id)
+            if msg.receiver == user:
+                msg.delete()
+                response_content = {"err_code":0, "message":"消息已删除", "data":None}
+            else:
+                response_content = {"err_code":-1, "message":"您不是该消息的接收者，无法删除", "data":None}
+        except Message.DoesNotExist:
+            response_content = {"err_code":-1, "message":"该消息不存在", "data":None}
+    
+    return HttpResponse(json.dumps(response_content))
+
+
 # some assist functions
 
 def make_cookie():
@@ -266,46 +332,6 @@ def make_cookie():
     for i in range(50):
         cookie_value += str(random.randint(0, 9))
     return cookie_value
-
-
-def make_verification_code():
-    ''' 随机生成4位验证码
-    '''
-
-    code = ""
-    for i in range(4):
-        code += str(random.randint(0, 9))
-    return code
-
-
-def save_verification_code(email, code):
-    ''' 保存验证码，email不可为空
-    '''
-
-    if not VerificationCode.objects.filter(email=email).exists():
-        VerificationCode.objects.create(email=email, code=code, make_time=timezone.now())
-    else:
-        obj = VerificationCode.objects.filter(email=email)[0]
-        obj.code = code
-        obj.make_time = timezone.now()
-        obj.save()
-
-
-def check_verification_code(email, code):
-    ''' 核对验证码
-    
-    Returns:
-        If the code is error or out of date, return false; otherwise, return true
-    '''
-
-    if not VerificationCode.objects.filter(email=email).exists():
-        return False
-    else:
-        obj = VerificationCode.objects.filter(email=email)[0]
-        if obj.code != code or timezone.now() > obj.make_time + datetime.timedelta(minutes=10):
-            return False
-        else:
-            return True
 
 
 def backend_ask_login_user(request):
@@ -339,3 +365,4 @@ def backend_ask_user(username, password):
         return User.objects.filter(email=username, password=password)[0]
     else:
         return None
+

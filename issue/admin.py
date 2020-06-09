@@ -12,7 +12,7 @@ class IssueAdmin(admin.ModelAdmin):
     # add list at the admin site
     list_display = ('Type', 'title', 'author', 'pub_date')
     # add search option at the admin site
-    search_fields = ['Type', 'title', 'author']
+    search_fields = ['title']
     # classify the infomation of articles
     fieldsets = [
         ('Basic Information', {'fields': ['Type', 'title', 'author', 'pub_date']}),

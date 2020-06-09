@@ -17,3 +17,6 @@ class Comment(models.Model):
     content_object = GenericForeignKey('content_type', 'object_id')
     parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, null=True) #record the parent comment. if it's level 1 comment. it should be null.
     likers = models.ManyToManyField('account.User', related_name='comment_liker')
+
+    def __str__(self):
+        return str(self.id)

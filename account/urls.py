@@ -22,4 +22,10 @@ urlpatterns = [
 	path('ask_login_user/', views.ask_login_user, name='ask_login_user'),
     # ex: /account/ask_user
 	path('ask_user/', views.ask_user, name='ask_user'),
+    # ex: /account/message/list
+    path('message/list/', views.message_list, name='msg_list'),
+    # ex: /account/message/3/read
+    path('message/<int:msg_id>/read/', views.message_read, name='msg_read'),
+    # ex: /account/message/4/delete
+    path('message/<int:msg_id>/delete/', views.message_delete, name='msg_del'),
 ]

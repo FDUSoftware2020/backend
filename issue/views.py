@@ -1,8 +1,10 @@
 import json
 from django.http import HttpResponse
 from django.utils import timezone
-from account.models import User
 from .models import Issue, Answer
+from account.models import User, Message
+from comment.models import Comment
+from account.utils.message import create_message
 
 # Create your views here.
 
@@ -19,8 +21,9 @@ def issue_create(request):
         if not author:
             response_content = {"err_code":-1, "message":"当前未登录", "data":None}
         else:
-            Issue.objects.create(Type=Type, title=title, author=author, pub_date=pub_date, content=content)
-            response_content = {"err_code":0, "message":"发布成功", "data":None}
+            issue = Issue(Type=Type, title=title, author=author, pub_date=pub_date, content=content)
+            issue.save()
+            response_content = {"err_code":0, "message":"发布成功", "data":issue.id}
     else:
         response_content = {"err_code":-1, "message":"请求方式错误", "data":None}
     
@@ -53,7 +56,7 @@ def issue_detail(request, issue_id):
     try:
         issue = Issue.objects.get(id=issue_id)
         user = backend_ask_login_user(request)
-        obj = conduct_detail_issue(issue, user)
+        obj = conduct_issue(issue, user)
         response_content = {"err_code":0, "message":"查询成功", "data":obj}
     except Issue.DoesNotExist:
         response_content = {"err_code":-1, "message":"该问题/文章不存在", "data":None}
@@ -68,9 +71,10 @@ def issue_search(request):
         data = json.loads(request.body)
         keyword = data.get("keyword")
         issue_list = Issue.objects.filter(title__icontains=keyword).order_by('title')
+        user = backend_ask_login_user(request)
         obj_list = []
         for issue in issue_list:
-            obj = conduct_brief_issue(issue)
+            obj = conduct_issue(issue, user, brief=True)
             obj_list.append(obj)
         response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
     else:
@@ -108,8 +112,24 @@ def issue_collection_list(request):
         response_content = {"err_code":-1, "message":"当前未登录", "data":None}
     else:
         obj_list = []
-        for issue in user.issue_set.all().order_by('title'):
-            obj = conduct_brief_issue(issue)
+        for issue in user.collect_issue.all().order_by('title'):
+            obj = conduct_issue(issue, user, brief=True)
+            obj_list.append(obj)
+        response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
+
+    return HttpResponse(json.dumps(response_content))
+
+
+def issue_publication_list(request):
+    ''' 获取登录用户的发布列表
+    '''
+    user = backend_ask_login_user(request)
+    if not user:
+        response_content = {"err_code":-1, "message":"当前未登录", "data":None}
+    else:
+        obj_list = []
+        for issue in user.create_issue.all().order_by('title'):
+            obj = conduct_issue(issue, user, brief=True)
             obj_list.append(obj)
         response_content = {"err_code":0, "message":"查询成功", "data":obj_list}
 
@@ -149,8 +169,13 @@ def answer_create(request, issue_id):
         else:
             try:
                 issue = Issue.objects.get(id=issue_id)
-                Answer.objects.create(issue=issue, replier=user, pub_date=timezone.now(), content=content)
-                response_content = {"err_code":0, "message":"回答已发布", "data":None}
+                if issue.Type != Issue.IssueType.ISSUE:
+                    response_content = {"err_code":-1, "message":"无法对文章进行回答", "data":None}
+                else:
+                    answer = Answer(issue=issue, replier=user, pub_date=timezone.now(), content=content)
+                    answer.save()
+                    create_message(Message.MsgType.AnswerToIssue, answer)
+                    response_content = {"err_code":0, "message":"回答已发布", "data":None}
             except Issue.DoesNotExist:
                 response_content = {"err_code":-1, "message":"该问题不存在", "data":None}
     else:
@@ -250,8 +275,8 @@ def backend_ask_login_user(request):
             return User.objects.filter(cookie_value=cookie_value)[0]
 
 
-def conduct_detail_issue(issue, user):
-    ''' 构造详细版Issue实例
+def conduct_issue(issue, user, brief=False):
+    ''' 构造Issue实例，其中brief控制是否是简洁版
     '''
     # static data
     ID = issue.id
@@ -259,7 +284,10 @@ def conduct_detail_issue(issue, user):
     title = issue.title
     author = issue.author.username
     pub_date = str(issue.pub_date)[0:16]
-    content = issue.content
+    if brief:
+        content = issue.content[0:50] + "......"
+    else:
+        content = issue.content
     collect_num = issue.collectors.count()
     like_num = issue.likers.count()
     # dynamic data
@@ -274,11 +302,14 @@ def conduct_detail_issue(issue, user):
             "collect_num":collect_num, "like_num":like_num, "IsCollecting":IsCollecting, "IsLiking":IsLiking}
 
 
-def conduct_brief_issue(issue):
-    ''' 构造简洁版Issue实例
+def compute_comment_num_of_answer(answer):
+    ''' 统计an answer下的评论数目
     '''
-    return {"id":issue.id, "type":issue.Type, "title":issue.title, "author":issue.author.username, "pub_date":str(issue.pub_date)[0:16], \
-            "collect_num":issue.collectors.count(), "like_num":issue.likers.count()}
+    C1_list = Comment.objects.filter(object_id=answer.id)
+    comment_num = len(C1_list)
+    for c1 in C1_list:
+        comment_num += Comment.objects.filter(parent_comment=c1.id).count()
+    return comment_num
 
 
 def conduct_detail_answer(answer, user):
@@ -293,7 +324,7 @@ def conduct_detail_answer(answer, user):
         IsLiking = False
     else:
         IsLiking = not (len(answer.likers.filter(id=user.id)) == 0)
-    comment_num = 0
+    comment_num = compute_comment_num_of_answer(answer)
 
     return {"id":ID, "author":author, "pub_date":pub_date, "content":content, \
             "like_num":like_num, "IsLiking":IsLiking, "comment_num":comment_num}
