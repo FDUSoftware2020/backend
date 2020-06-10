@@ -1,0 +1,2740 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 7,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 7,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 7,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 7,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add verification code",
+      "content_type": 8,
+      "codename": "add_verificationcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change verification code",
+      "content_type": 8,
+      "codename": "change_verificationcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete verification code",
+      "content_type": 8,
+      "codename": "delete_verificationcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view verification code",
+      "content_type": 8,
+      "codename": "view_verificationcode"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add issue",
+      "content_type": 9,
+      "codename": "add_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change issue",
+      "content_type": 9,
+      "codename": "change_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete issue",
+      "content_type": 9,
+      "codename": "delete_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view issue",
+      "content_type": 9,
+      "codename": "view_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add answer",
+      "content_type": 10,
+      "codename": "add_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change answer",
+      "content_type": 10,
+      "codename": "change_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete answer",
+      "content_type": 10,
+      "codename": "delete_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view answer",
+      "content_type": 10,
+      "codename": "view_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 11,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 11,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 11,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 11,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add message",
+      "content_type": 12,
+      "codename": "add_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change message",
+      "content_type": 12,
+      "codename": "change_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete message",
+      "content_type": 12,
+      "codename": "delete_message"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view message",
+      "content_type": 12,
+      "codename": "view_message"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$oNL8zv9eTTHY$VPnAaPIFsu21ogkDBaOPnsROOMYCr6ViQnVOwxHOmZg=",
+      "last_login": "2020-06-09T14:24:44.431Z",
+      "is_superuser": true,
+      "username": "starshine",
+      "first_name": "",
+      "last_name": "",
+      "email": "cy360124@163.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-04-30T13:13:09.812Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$Qqjz2OsXnHGX$Yr1LmL16Q16K9lP0JZRZhC3Ux/u0N6Hbtpy6tOsYlto=",
+      "last_login": "2020-05-09T02:32:10.736Z",
+      "is_superuser": false,
+      "username": "test-user",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-05-08T14:43:27Z",
+      "groups": [],
+      "user_permissions": [
+        28,
+        32,
+        44,
+        40,
+        36
+      ]
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4wfd7xvwgn8ez10ktg5dctkjxxa6hres",
+    "fields": {
+      "session_data": "M2EzMzViZDAxN2JmZDcxNjdjZWIxYTI1ZjA1OGIwNzhkMDY1ZTA4ODp7Il9hdXRoX3VzZXJfaWQiOiI0IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyZjczYzllMWJmZGEwZDFlMTQ0ZjliZWQ1ZTE3NmNjZjUwMTllYmQxIn0=",
+      "expire_date": "2020-05-22T15:06:01.935Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8bzbfij47cztw47p5qgavuv3484spzb4",
+    "fields": {
+      "session_data": "OWQzNmE1M2NhMmU3NDc4MmFhMzkzNjNmOTc2N2EzNTIyNTJmNjA1OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2M2YyODQ1ZDE4NmYzM2U1MmIwNmQwZmM3MDc0M2FiNjZiZjQxZTQzIn0=",
+      "expire_date": "2020-05-22T15:43:27.257Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "j7t57cibu22e7e8lcsipy3c790wlve76",
+    "fields": {
+      "session_data": "OWQzNmE1M2NhMmU3NDc4MmFhMzkzNjNmOTc2N2EzNTIyNTJmNjA1OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2M2YyODQ1ZDE4NmYzM2U1MmIwNmQwZmM3MDc0M2FiNjZiZjQxZTQzIn0=",
+      "expire_date": "2020-06-23T14:24:44.436Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "jd9x4r17342xlgfzadbf2pbc7u4g15d9",
+    "fields": {
+      "session_data": "OWQzNmE1M2NhMmU3NDc4MmFhMzkzNjNmOTc2N2EzNTIyNTJmNjA1OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2M2YyODQ1ZDE4NmYzM2U1MmIwNmQwZmM3MDc0M2FiNjZiZjQxZTQzIn0=",
+      "expire_date": "2020-05-22T14:45:34.206Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ui7wa1ssl7e655pd9adbezaox2fiscb7",
+    "fields": {
+      "session_data": "M2EzMzViZDAxN2JmZDcxNjdjZWIxYTI1ZjA1OGIwNzhkMDY1ZTA4ODp7Il9hdXRoX3VzZXJfaWQiOiI0IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyZjczYzllMWJmZGEwZDFlMTQ0ZjliZWQ1ZTE3NmNjZjUwMTllYmQxIn0=",
+      "expire_date": "2020-05-23T02:32:10.740Z"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 1,
+    "fields": {
+      "username": "starshine",
+      "email": "cy360124@163.com",
+      "password": "010203",
+      "cookie_value": "82503412969431793504189344682938926315661934886704",
+      "signature": "\u95ea\u70c1\u7684\u661f\u5149",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 3,
+    "fields": {
+      "username": "\u6d69\u6e3a\u661f\u7a7a",
+      "email": "17307130110@fudan.edu.cn",
+      "password": "884801",
+      "cookie_value": "",
+      "signature": "\u4ed6(\u5979)\u4ec0\u4e48\u4e5f\u6ca1\u7559\u4e0b~",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 4,
+    "fields": {
+      "username": "lyf",
+      "email": "575589325@qq.com",
+      "password": "123456",
+      "cookie_value": "63501947128871751815220129950471615503483784145585",
+      "signature": "\u4ed6(\u5979)\u4ec0\u4e48\u4e5f\u6ca1\u7559\u4e0b~",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 5,
+    "fields": {
+      "username": "frontend996",
+      "email": "regonly2019@126.com",
+      "password": "996front",
+      "cookie_value": "42094642059154417566453104032036451920868742369361",
+      "signature": "\u4e0d\u8981\u71ac\u591c\u5566",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 6,
+    "fields": {
+      "username": "simon",
+      "email": "xrnie@outlook.com",
+      "password": "123456",
+      "cookie_value": "07725240863270339202617795859219281340632397425332",
+      "signature": "\u4ed6(\u5979)\u4ec0\u4e48\u4e5f\u6ca1\u7559\u4e0b~",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 7,
+    "fields": {
+      "username": "\u5f20",
+      "email": "17307130019@fudan.edu.cn",
+      "password": "111111",
+      "cookie_value": "67969754067672591232039602373973926027829239169852",
+      "signature": "\u4ed6(\u5979)\u4ec0\u4e48\u4e5f\u6ca1\u7559\u4e0b~",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 8,
+    "fields": {
+      "username": "tt",
+      "email": "16307130043@fudan.edu.cn",
+      "password": "123456",
+      "cookie_value": "72808826620346781865240119530546102180386645121209",
+      "signature": "\u4ed6(\u5979)\u4ec0\u4e48\u4e5f\u6ca1\u7559\u4e0b~",
+      "contribution": 0
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 1,
+    "fields": {
+      "email": "cy360124@163.com",
+      "code": "9436",
+      "make_time": "2020-04-30T13:18:49Z"
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 2,
+    "fields": {
+      "email": "575589325@qq.com",
+      "code": "2867",
+      "make_time": "2020-05-08T15:13:35.457Z"
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 3,
+    "fields": {
+      "email": "regonly2019@126.com",
+      "code": "8290",
+      "make_time": "2020-05-09T02:42:06.463Z"
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 4,
+    "fields": {
+      "email": "xrnie@outlook.com",
+      "code": "9195",
+      "make_time": "2020-05-10T10:57:27.622Z"
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 5,
+    "fields": {
+      "email": "17307130019@fudan.edu.cn",
+      "code": "9150",
+      "make_time": "2020-05-10T14:26:10.496Z"
+    }
+  },
+  {
+    "model": "account.verificationcode",
+    "pk": 6,
+    "fields": {
+      "email": "16307130043@fudan.edu.cn",
+      "code": "0461",
+      "make_time": "2020-06-07T02:53:29.084Z"
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 1,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 39,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:27:49.031Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 3,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 41,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:27:52.284Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 7,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 45,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:27:53.031Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 9,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 47,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:28:55.661Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 10,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 48,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:28:55.830Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 11,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 49,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:28:56.013Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 12,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 50,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:28:56.173Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 13,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 51,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:28:56.373Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 17,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 53,
+      "comment_id": 55,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-09T15:37:53.928Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 18,
+    "fields": {
+      "Type": 2,
+      "issue_id": 11,
+      "answer_id": 16,
+      "parent_comment_id": -1,
+      "comment_id": 56,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T05:28:33.605Z",
+      "content": "\u5728\u5e16\u5b50<\u5982\u4f55\u4ece\u96f6\u5f00\u59cb\u5199\u4e00\u4e2a\u7b80\u5355\u7684\u64cd\u4f5c\u7cfb\u7edf\uff1f>\u7684\u56de\u7b54\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 19,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 44,
+      "comment_id": 57,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:47:25.327Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 20,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 44,
+      "comment_id": 58,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:47:49.978Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 21,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 59,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:52:01.903Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 22,
+    "fields": {
+      "Type": 2,
+      "issue_id": 6,
+      "answer_id": 9,
+      "parent_comment_id": 11,
+      "comment_id": 60,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:54:03.071Z",
+      "content": "\u5728\u5e16\u5b50<\u5982\u4f55\u7406\u89e3C++\u7684\u667a\u80fd\u6307\u9488\uff1f>\u7684\u56de\u7b54\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 23,
+    "fields": {
+      "Type": 2,
+      "issue_id": 6,
+      "answer_id": 9,
+      "parent_comment_id": 11,
+      "comment_id": 61,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:57:05.692Z",
+      "content": "\u5728\u5e16\u5b50<\u5982\u4f55\u7406\u89e3C++\u7684\u667a\u80fd\u6307\u9488\uff1f>\u7684\u56de\u7b54\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 24,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 62,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T06:57:55.072Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 25,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 44,
+      "comment_id": 63,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:01:50.148Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 26,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 44,
+      "comment_id": 64,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:03:54.850Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 27,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 65,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:12:00.106Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 28,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 66,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:12:01.590Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 29,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 67,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:12:02.101Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 30,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 68,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:12:02.553Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 31,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 69,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:12:33.732Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 32,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 70,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:33.713Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 33,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 71,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:35.384Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 34,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 72,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:45.918Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 35,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 73,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:46.644Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 36,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 74,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:47.107Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 37,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 75,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:47.290Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 38,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 76,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:47.503Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 39,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 77,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:47.973Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 40,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 69,
+      "comment_id": 78,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:13:48.553Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 41,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 79,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:14:36.764Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 42,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 80,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:15:21.363Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 43,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 81,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:15:23.916Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 44,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 82,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:17:02.500Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 45,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 83,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:21:00.418Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 46,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 84,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:26:32.040Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 47,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 85,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:27:06.305Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 48,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 84,
+      "comment_id": 86,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:27:21.111Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 49,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 84,
+      "comment_id": 87,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:28:54.594Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 50,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 84,
+      "comment_id": 88,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:29:21.210Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 51,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 65,
+      "comment_id": 89,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:29:38.800Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 52,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 65,
+      "comment_id": 90,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:30:39.524Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 53,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 65,
+      "comment_id": 91,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:31:19.224Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 54,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 65,
+      "comment_id": 92,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:34:33.535Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 55,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 93,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:34:54.718Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 56,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 94,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:36:04.513Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 57,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 95,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:36:27.180Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 58,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 96,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:36:55.140Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 59,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 97,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:37:21.921Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 60,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 98,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:37:42.770Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 61,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 99,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:38:51.880Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 62,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 99,
+      "comment_id": 100,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:39:45.032Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 63,
+    "fields": {
+      "Type": 1,
+      "issue_id": 12,
+      "answer_id": -1,
+      "parent_comment_id": 99,
+      "comment_id": 101,
+      "from_uname": "tt",
+      "receiver": 8,
+      "pub_date": "2020-06-10T07:39:56.725Z",
+      "content": "\u5728\u6587\u7ae0<\u6587\u7ae0>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 64,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 102,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:41:16.919Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 65,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 102,
+      "comment_id": 103,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:42:13.416Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 66,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 102,
+      "comment_id": 104,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:42:22.986Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 67,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": 44,
+      "comment_id": 105,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:43:06.916Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u5bf9\u60a8\u7684\u8bc4\u8bba\u65b0\u589e\u56de\u590d",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "account.message",
+    "pk": 68,
+    "fields": {
+      "Type": 1,
+      "issue_id": 10,
+      "answer_id": -1,
+      "parent_comment_id": -1,
+      "comment_id": 106,
+      "from_uname": "frontend996",
+      "receiver": 5,
+      "pub_date": "2020-06-10T07:43:56.771Z",
+      "content": "\u5728\u6587\u7ae0<\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58>\u4e0b\uff0c\u65b0\u589e\u4e00\u6761\u8bc4\u8bba",
+      "IsReading": false
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 4,
+    "fields": {
+      "Type": 0,
+      "title": "\u4ec0\u4e48\u662f\u6700\u4f18\u5b50\u7ed3\u6784\u6027\u8d28\uff1f",
+      "author": 1,
+      "pub_date": "2020-05-01T11:51:16Z",
+      "content": "\u6700\u8fd1\u5728\u7b97\u6cd5\u76f8\u5173\u4e66\u7c4d\u4e0a\u770b\u5230\u201d\u67d0\u4e2a\u95ee\u9898\u6ee1\u8db3\u6700\u4f18\u5b50\u7ed3\u6784\u6027\u8d28\uff0c\u4ece\u800c\u53ef\u4ee5\u5982\u4f55\u6c42\u89e3\u201c\u7684\u8868\u8ff0\uff0c\u201d\u6700\u4f18\u5b50\u7ed3\u6784\u6027\u8d28\u201d\u5177\u4f53\u6307\u4ec0\u4e48\uff1f",
+      "collectors": [
+        4,
+        6,
+        7
+      ],
+      "likers": [
+        4,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 5,
+    "fields": {
+      "Type": 1,
+      "title": "\u6d45\u8c08\u6df1\u5ea6\u5b66\u4e60\u4e2d\u7684\u51e0\u79cd\u4eba\u5de5\u795e\u7ecf\u7f51\u7edc",
+      "author": 3,
+      "pub_date": "2020-05-01T07:36:57Z",
+      "content": "\u4eba\u5de5\u795e\u7ecf\u7f51\u7edc\uff08Artifical Neural Network, ANN\uff09\u662f\u6307\u4e00\u7cfb\u5217\u53d7\u751f\u7269\u5b66\u548c\u795e\u7ecf\u79d1\u5b66\u542f\u53d1\u7684\u6570\u5b66\u6a21\u578b\uff0e\u8fd9\u4e9b\u6a21\u578b\u4e3b\u8981\u662f\u901a\u8fc7\u5bf9\u4eba\u8111\u7684\u795e\u7ecf\u5143\u7f51\u7edc\u8fdb\u884c\u62bd\u8c61\uff0c\u6784\u5efa\u4eba\u5de5\u795e\u7ecf\u5143\uff0c\u5e76\u6309\u7167\u4e00\u5b9a\u62d3\u6251\u7ed3\u6784\u6765\u5efa\u7acb\u4eba\u5de5\u795e\u7ecf\u5143\u4e4b\u95f4\u7684\u8fde\u63a5\uff0c\u6765\u6a21\u62df\u751f\u7269\u795e\u7ecf\u7f51\u7edc\uff0e\u5728\u4eba\u5de5\u667a\u80fd\u9886\u57df\uff0c\u4eba\u5de5\u795e\u7ecf\u7f51\u7edc\u4e5f\u5e38\u5e38\u7b80\u79f0\u4e3a\u795e\u7ecf\u7f51\u7edc\uff08Neural Network\uff0cNN\uff09\u6216\u795e\u7ecf\u6a21\u578b\uff08Neural Model\uff09\u3002\u76ee\u524d\u5e38\u7528\u7684\u795e\u7ecf\u7f51\u7edc\u7ed3\u6784\u6709\u4e09\u79cd\uff1a\u524d\u9988\u7f51\u7edc\u3001\u8bb0\u5fc6\u7f51\u7edc\u3001\u56fe\u7f51\u7edc\u3002\r\n        \u524d\u9988\u7f51\u7edc\u4e2d\u5404\u4e2a\u795e\u7ecf\u5143\u6309\u63a5\u6536\u4fe1\u606f\u7684\u5148\u540e\u5206\u4e3a\u4e0d\u540c\u7684\u7ec4\uff0e\u6bcf\u4e00\u7ec4\u53ef\u4ee5\u770b\u4f5c\u4e00\u4e2a\u795e\u7ecf\u5c42\uff0e\u6bcf\u4e00\u5c42\u4e2d\u7684\u795e\u7ecf\u5143\u63a5\u6536\u524d\u4e00\u5c42\u795e\u7ecf\u5143\u7684\u8f93\u51fa\uff0c\u5e76\u8f93\u51fa\u5230\u4e0b\u4e00\u5c42\u795e\u7ecf\u5143\uff0e\u6574\u4e2a\u7f51\u7edc\u4e2d\u7684\u4fe1\u606f\u662f\u671d\u4e00\u4e2a\u65b9\u5411\u4f20\u64ad\uff0c\u6ca1\u6709\u53cd\u5411\u7684\u4fe1\u606f\u4f20\u64ad\uff0c\u53ef\u4ee5\u7528\u4e00\u4e2a\u6709\u5411\u65e0\u73af\u8def\u56fe\u8868\u793a\u3002\u524d\u9988\u7f51\u7edc\u5305\u62ec\u5168\u8fde\u63a5\u524d\u9988\u7f51\u7edc\u548c\u5377\u79ef\u795e\u7ecf\u7f51\u7edc\u7b49\u3002\u5168\u8fde\u63a5\u7f51\u7edc\uff08FNN\uff09\u4e2d\u5c42\u4e0e\u5c42\u4e4b\u95f4\u795e\u7ecf\u5143\u4e24\u4e24\u76f8\u8fde\uff0c\u8fde\u63a5\u6570\u8f83\u591a\uff1b\u5377\u79ef\u795e\u7ecf\u7f51\u7edc\uff08CNN\uff09\u4e2d\u5c42\u4e0e\u5c42\u4e4b\u95f4\u795e\u7ecf\u5143\u4ee5\u7c7b\u4f3c\u4e0e\u5377\u79ef\u7684\u65b9\u5f0f\u76f8\u8fde\uff0c\u6743\u91cd\u5171\u4eab\u3002\r\n        \u8bb0\u5fc6\u7f51\u7edc\uff0c\u4e5f\u79f0\u4e3a\u53cd\u9988\u7f51\u7edc\uff0c\u7f51\u7edc\u4e2d\u7684\u795e\u7ecf\u5143\u4e0d\u4f46\u53ef\u4ee5\u63a5\u6536\u5176\u4ed6\u795e\u7ecf\u5143\u7684\u4fe1\u606f\uff0c\u4e5f\u53ef\u4ee5\u63a5\u6536\u81ea\u5df1\u7684\u5386\u53f2\u4fe1\u606f\uff0e\u548c\u524d\u9988\u7f51\u7edc\u76f8\u6bd4\uff0c\u8bb0\u5fc6\u7f51\u7edc\u4e2d\u7684\u795e\u7ecf\u5143\u5177\u6709\u8bb0\u5fc6\u529f\u80fd\uff0c\u5728\u4e0d\u540c\u7684\u65f6\u523b\u5177\u6709\u4e0d\u540c\u7684\u72b6\u6001\uff0e\u8bb0\u5fc6\u795e\u7ecf\u7f51\u7edc\u4e2d\u7684\u4fe1\u606f\u4f20\u64ad\u53ef\u4ee5\u662f\u5355\u5411\u6216\u53cc\u5411\u4f20\u9012\uff0c\u56e0\u6b64\u53ef\u7528\u4e00\u4e2a\u6709\u5411\u5faa\u73af\u56fe\u6216\u65e0\u5411\u56fe\u6765\u8868\u793a\u3002\u5178\u578b\u7684\u8bb0\u5fc6\u7f51\u7edc\u6709\u5faa\u73af\u795e\u7ecf\u7f51\u7edc\uff08RNN\uff09\u3002\r\n        \u56fe\u7f51\u7edc\u662f\u5b9a\u4e49\u5728\u56fe\u7ed3\u6784\u6570\u636e\u4e0a\u7684\u795e\u7ecf\u7f51\u7edc\u3002\u56fe\u4e2d\u6bcf\u4e2a\u8282\u70b9\u90fd\u7531\u4e00\u4e2a\u6216\u4e00\u7ec4\u795e\u7ecf\u5143\u6784\u6210\uff0e\u8282\u70b9\u4e4b\u95f4\u7684\u8fde\u63a5\u53ef\u4ee5\u662f\u6709\u5411\u7684\uff0c\u4e5f\u53ef\u4ee5\u662f\u65e0\u5411\u7684\uff0e\u6bcf\u4e2a\u8282\u70b9\u53ef\u4ee5\u6536\u5230\u6765\u81ea\u76f8\u90bb\u8282\u70b9\u6216\u81ea\u8eab\u7684\u4fe1\u606f\uff0e\u6362\u53e5\u8bdd\u8bf4\uff0c\u56fe\u7f51\u7edc\u662f\u524d\u9988\u7f51\u7edc\u548c\u8bb0\u5fc6\u7f51\u7edc\u7684\u6cdb\u5316\u3002\r\n\r\n\uff08\u672c\u6587\u62f7\u8d1d\u4e8e\u90b1\u9521\u9e4f\u8001\u5e08\u7684\u300a\u795e\u7ecf\u7f51\u7edc\u4e0e\u6df1\u5ea6\u5b66\u4e60\u300b\u4e00\u4e66\uff09",
+      "collectors": [
+        5
+      ],
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 6,
+    "fields": {
+      "Type": 0,
+      "title": "\u5982\u4f55\u7406\u89e3C++\u7684\u667a\u80fd\u6307\u9488\uff1f",
+      "author": 1,
+      "pub_date": "2020-05-05T15:47:07Z",
+      "content": "\u6700\u8fd1\u4e86\u89e3\u5230C++\u589e\u6dfb\u4e86\u667a\u80fd\u6307\u9488\uff0c\u60f3\u77e5\u9053\u5b83\u7684\u6982\u5ff5\u3001\u4f5c\u7528\u548c\u5b9e\u73b0\u539f\u7406\u3002",
+      "collectors": [],
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 7,
+    "fields": {
+      "Type": 0,
+      "title": "\u5982\u4f55\u7406\u89e3\u4e0e\u770b\u5f85\u5728cvpr2020\u4e2d\u63d0\u51fa\u7684circle loss\uff1f",
+      "author": 5,
+      "pub_date": "2020-05-09T04:14:11.271Z",
+      "content": "[Circle Loss](https://arxiv.org/abs/2002.10857)\n![circle_loss.png](http://182.92.131.202:8000/uploads/20201409041411096923.jpg)\n",
+      "collectors": [
+        5
+      ],
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 8,
+    "fields": {
+      "Type": 0,
+      "title": "\u6709\u54ea\u4e9b\u5f88\u6709\u610f\u601d\u7684\u5bf9\u6297\u6837\u672c\u7684\u7814\u7a76\u5de5\u4f5c\uff1f",
+      "author": 5,
+      "pub_date": "2020-05-09T13:43:56.303Z",
+      "content": "An adversarial example is an instance with small, intentional feature perturbations that cause a machine learning model to make a false prediction. \n\n![adversarialpanda.jpg](http://182.92.131.202:8000/uploads/20204309134356176580.jpg)",
+      "collectors": [],
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 9,
+    "fields": {
+      "Type": 0,
+      "title": "\u7b97\u6cd5\u4f5c\u4e1a\u600e\u4e48\u505a\uff1f",
+      "author": 6,
+      "pub_date": "2020-05-10T10:58:28.245Z",
+      "content": "\u8c01\u5199\u4e86\u7b97\u6cd5\u4f5c\u4e1a\u554a",
+      "collectors": [],
+      "likers": []
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 10,
+    "fields": {
+      "Type": 1,
+      "title": "\u64cd\u4f5c\u7cfb\u7edf\u8bfe\u5b9e\u9a8c5: \u5185\u5b58",
+      "author": 5,
+      "pub_date": "2020-05-10T12:58:02.267Z",
+      "content": "## \u80cc\u666f\u4ecb\u7ecd\n\n\u5728\u672c\u5b9e\u9a8c\u4e2d\uff0c\u6211\u4eec\u5c06\u5bf9JOS\u7cfb\u7edf\u7684\u5185\u5b58\u7ba1\u7406\u4ee3\u7801\u8fdb\u884c\u89e3\u8bfb\u548c\u8865\u5168\u3002JOS\u7cfb\u7edf\u7684\u5185\u5b58\u7ba1\u7406\u67092\u4e2a\u7ec4\u4ef6\u3002\n\n\u7b2c\u4e00\u4e2a\u7ec4\u4ef6\u662f\u5185\u5b58\u7684\u7269\u7406\u5185\u5b58\u5206\u914d\u5668\uff0c\u5373\u5185\u6838\u53ef\u4ee5\u5206\u914d\u6216\u91ca\u653e\u5185\u5b58\u3002 \u5206\u914d\u5668\u4ee54096\u4e2a\u5b57\u8282\u4e3a\u5355\u4f4d\uff08\u9875\u9762\uff09\u8fdb\u884c\u64cd\u4f5c\u3002JOS\u9700\u8981\u7ef4\u62a4\u4e00\u4e2a\u6570\u636e\u7ed3\u6784\u6765\u8bb0\u5f55\u54ea\u4e9b\u7269\u7406\u9875\u9762\u662f\u7a7a\u95f2\u7684\u6216\u662f\u88ab\u5206\u914d\u7684\uff0c\u4ee5\u53ca\u88ab\u5206\u914d\u7684\u9875\u9762\u88ab\u591a\u5c11\u4e2a\u8fdb\u7a0b\u5171\u4eab\u3002\n\n\u7b2c\u4e8c\u4e2a\u7ec4\u4ef6\u662f\u865a\u62df\u5185\u5b58\u3002 \u5b83\u5c06\u5185\u6838\u548c\u7528\u6237\u8f6f\u4ef6\u4f7f\u7528\u7684\u865a\u62df\u5730\u5740\u6620\u5c04\u5230\u7269\u7406\u5185\u5b58\u3002\u5f53\u6307\u4ee4\u4f7f\u7528\u5185\u5b58\uff0c\u67e5\u8be2\u9875\u8868\u65f6\uff0cx86\u786c\u4ef6\u7684\u5185\u5b58\u7ba1\u7406\u5355\u5143\uff08MMU\uff09\u6267\u884c\u6620\u5c04\uff08mapping\uff09\u3002  \n\n\u4e3a\u4e86\u5b8c\u6210JOS\u7cfb\u7edf\u7684\u5185\u5b58\u7ba1\u7406\u7cfb\u7edf\uff0c\u6211\u4eec\u9700\u8981\u4e86\u89e3x86\u4e2d\u7684\u5185\u5b58\u7ba1\u7406\u65b9\u6cd5\u3002\n\n\u5728x86\u4e2d\uff0c\u865a\u62df\u5730\u5740(Virtual Address)\u5305\u542b\u4e86\u6bb5\u9009\u62e9\u5b50(segment selector)\u548c\u6bb5\u5185\u504f\u79fb(segment offset)\uff1b\u7ebf\u6027\u5730\u5740(Linear Address)\u662f\u7ecf\u8fc7\u6bb5\u8f6c\u6362(segment translation)\u5f97\u5230\u7684\u5730\u5740\uff1b\u7269\u7406\u5730\u5740(Physical Addresses)\u662f\u7ecf\u8fc7\u6bb5\u8f6c\u6362\u548c\u9875\u8f6c\u6362(page translation)\u6700\u7ec8\u5f97\u5230\u7684\u771f\u5b9e\u5185\u5b58\u5730\u5740\uff0c\u5373\u8bbf\u95eeRAM\u7684\u603b\u7ebf\u4e0a\u7684\u5730\u5740\u3002\n\n![address.png](http://182.92.131.202:8000/uploads/20205810125801822939.jpg)\n\nC\u8bed\u8a00\u7a0b\u5e8f\u4e2d\u7684\u6307\u9488\u503c\u662f\u865a\u62df\u5730\u5740\u4e2d\u6bb5\u5185\u504f\u79fb\u90e8\u5206\u7684\u503c\u3002\u5728JOS\u7684boot/boot.S\u6587\u4ef6\u4e2d\uff0c\u6211\u4eec\u5f15\u5165\u4e86\u4e00\u4e2a\u5168\u5c40\u63cf\u8ff0\u7b26\u8868(GDT)\uff0c\u8fd9\u4e2a\u8868\u901a\u8fc7\u628a\u6240\u6709\u6bb5\u7684\u57fa\u5740\u8bbe\u7f6e\u4e3a0\uff0c\u754c\u9650\u8bbe\u7f6e\u4e3a0xffffffff\u7684\u65b9\u5f0f\uff0c\u5173\u95ed\u4e86\u5206\u6bb5\u7ba1\u7406\u7684\u529f\u80fd\u3002\u56e0\u6b64\u865a\u62df\u5730\u5740\u4e2d\u7684\u6bb5\u9009\u62e9\u5b50\u5b57\u6bb5\u7684\u5185\u5bb9\u5df2\u7ecf\u6ca1\u6709\u4efb\u4f55\u610f\u4e49\uff0c\u7ebf\u6027\u5730\u5740\u7684\u503c\u603b\u662f\u7b49\u4e8e\u865a\u62df\u5730\u5740\u4e2d\u6bb5\u5185\u504f\u79fb\u7684\u503c\u3002\n\n\u6240\u4ee5\u5728JOS\u7684\u5185\u5b58\u7ba1\u7406\u4e2d\uff0c\u6211\u4eec\u53ea\u9700\u8981\u5173\u6ce8\u9875\u8868\u673a\u5236\u3002\u63a5\u4e0b\u6765\u6211\u4eec\u4ecb\u7ecd\u4e00\u4e0bx86\u7684\u9875\u8868\u673a\u5236\u3002\n\n\u3002x86 \u7684\u9875\u8868\u786c\u4ef6\u901a\u8fc7\u6620\u5c04\u673a\u5236\u5c06\u865a\u62df\u5730\u5740\u548c\u7269\u7406\u5730\u5740\u8054\u7cfb\u8d77\u6765\u3002\n\n\u4e00\u4e2a x86 \u9875\u8868\u5c31\u662f\u4e00\u4e2a\u5305\u542b 2^20\uff081,048,576\uff09\u6761\u9875\u8868\u6761\u76ee\uff08PTE\uff09\u7684\u6570\u7ec4\u3002\u6bcf\u6761 PTE \u5305\u542b\u4e86\u4e00\u4e2a 20 \u4f4d\u7684\u7269\u7406\u9875\u53f7\uff08PPN\uff09\u53ca\u4e00\u4e9b\u6807\u5fd7\u4f4d\u3002\u5206\u9875\u786c\u4ef6\u8981\u627e\u5230\u4e00\u4e2a\u865a\u62df\u5730\u5740\u5bf9\u5e94\u7684 PTE\uff0c\u53ea\u9700\u4f7f\u7528\u5176\u9ad820\u4f4d\u6765\u627e\u5230\u8be5\u865a\u62df\u5730\u5740\u5728\u9875\u8868\u4e2d\u7684\u7d22\u5f15\uff0c\u7136\u540e\u628a\u5176\u9ad8 20 \u4f4d\u66ff\u6362\u4e3a\u5bf9\u5e94 PTE \u7684 PPN\u3002\u800c\u4f4e 12 \u4f4d\u662f\u4f1a\u88ab\u5206\u9875\u786c\u4ef6\u539f\u6837\u590d\u5236\u7684\u3002\u56e0\u6b64\u5728\u865a\u62df\u5730\u5740-\u7269\u7406\u5730\u5740\u7684\u7ffb\u8bd1\u673a\u5236\u4e0b\uff0c\u9875\u8868\u53ef\u4ee5\u4e3a\u64cd\u4f5c\u7cfb\u7edf\u63d0\u4f9b\u5bf9\u4e00\u5757\u5757\u5927\u5c0f\u4e3a 4096\uff082^12\uff09\u5b57\u8282\u7684\u5185\u5b58\u7247\uff0c\u8fd9\u6837\u7684\u4e00\u4e2a\u5185\u5b58\u7247\u5c31\u662f\u4e00\u9875\u3002\n\n![translate.png](http://182.92.131.202:8000/uploads/20205810125801822261.jpg)\n\n\u7531\u4e0a\u56fe\u53ef\u77e5\uff0c\u5730\u5740\u7684\u7ffb\u8bd1\u4e8b\u5b9e\u4e0a\u662f\u7ecf\u8fc7\u4e86\u4e00\u4e2a\u4e8c\u7ea7\u9875\u8868\uff0c\u7c7b\u4f3c\u4e8e\u4e00\u68f52\u5c42\u7684\u6811\u3002\u5206\u9875\u786c\u4ef6\u4f7f\u7528\u865a\u62df\u5730\u5740\u7684\u9ad8 10 \u4f4d\u6765\u51b3\u5b9a\u5bf9\u5e94\u9875\u76ee\u5f55\u6761\u76ee\u3002\u5982\u679c\u60f3\u8981\u7684\u6761\u76ee\u5df2\u7ecf\u653e\u5728\u4e86\u9875\u76ee\u5f55\u4e2d\uff0c\u5206\u9875\u786c\u4ef6\u5c31\u4f1a\u7ee7\u7eed\u4f7f\u7528\u63a5\u4e0b\u6765\u7684 10 \u4f4d\u6765\u4ece\u9875\u8868\u9875\u4e2d\u9009\u62e9\u51fa\u5bf9\u5e94\u7684 PTE\u3002\u6700\u540e\u901a\u8fc7\u540e12\u4f4d\u504f\u79fb\u91cf\u786e\u5b9a\u7269\u7406\u5730\u5740\u3002\n\n![PTE.png](http://182.92.131.202:8000/uploads/20205810125801823056.jpg)\n\n\u6700\u540e\u6211\u4eec\u4ecb\u7ecd\u4e00\u4e0b\u9875\u8868\u9879(Page Table Entry)\u7684\u7ed3\u6784\u3002\u5982\u4e0a\u56fe\u6240\u793a\uff0c\u9664\u4e86\u7269\u7406\u9875\u6846\u53f7\u4ee5\u5916\uff0c\u9875\u8868\u9879\u8fd8\u5305\u62ec\u5f88\u591a\u6807\u5fd7\u4f4d\uff0c\u8bf4\u660e\u5206\u9875\u786c\u4ef6\u5bf9\u5e94\u7684\u865a\u62df\u5730\u5740\u7684\u4f7f\u7528\u6743\u9650\u3002\u5176\u4e2d\u7684\u90e8\u5206\u6807\u5fd7\u4f4d\u7684\u542b\u4e49\u5982\u4e0b\uff1a\n\n- PTE_P \u8868\u793a PTE \u662f\u5426\u9648\u5217\u5728\u9875\u8868\u4e2d\n- PTE_W \u8868\u793a\u80fd\u5426\u5bf9\u9875\u6267\u884c\u5199\u64cd\u4f5c\n- PTE_U \u8868\u793a\u7528\u6237\u7a0b\u5e8f\u80fd\u5426\u4f7f\u7528\u8be5\u9875\uff08\u82e5\u4e0d\u8bbe\u7f6e\u8868\u793a\u4ec5\u6709\u5185\u6838\u80fd\u4f7f\u7528\u8be5\u9875\uff09\n- \u5176\u4ed6\u6807\u5fd7\u4f4d\u7684\u5b8f\u5b9a\u4e49\u5728JOS\u7684inc/mmu.h\u6587\u4ef6\u4e2d\uff0c\u672c\u6b21\u5b9e\u9a8c\u4e0d\u4f1a\u7528\u5230\u3002\n\n## Physical Page Management\n\n>\u9605\u8bfb kern/pmap.c\u4e2d\u7684 mem_init()\u51fd\u6570\u7684\u4ee3\u7801\uff08\u5230 \"check_page();\"\u8fd9\u53e5\u4ee3\u7801\u4e3a\u6b62)\uff0c\u4ecb\u7ecd\u6574\u4e2a\u6d41\u7a0b\u4ee5\u53ca\u5176\u4e2dboot_alloc(), page_init(), page_alloc(), page_free()\u8fd9\u51e0\u4e2a\u51fd\u6570\u7684\u4f5c\u7528\u3002\n\n\u542f\u52a8\u5185\u6838\u7684`i386_init`\u51fd\u6570\u5728\u8c03\u7528`cons_init()`\u521d\u59cb\u5316\u63a7\u5236\u53f0\u540e\uff0c\u8c03\u7528`mem_init()`\u8fdb\u884cJOS\u5185\u5b58\u7ba1\u7406\u7684\u521d\u59cb\u5316\uff08\u5efa\u7acb\u4e8c\u7ea7\u9875\u8868\uff09\u3002\u7531\u4e8e`mem_init()`\u7684\u524d\u534a\u90e8\u5206\u4e3b\u8981\u8c03\u7528\u4e86`boot_alloc()`\u548c`page_init()`\u51fd\u6570\uff0c\u6211\u4eec\u5148\u6765\u5206\u6790\u8fd9\u4e24\u4e2a\u51fd\u6570\u7684\u4f5c\u7528\u3002\n\n### **boot_alloc()\u51fd\u6570**\n\n#### \u51fd\u6570\u529f\u80fd\n`boot_alloc()`\u51fd\u6570\u662f\u4e00\u4e2a\u4e34\u65f6\u7684\u7269\u7406\u5185\u5b58\uff08\u9875\uff09\u5206\u914d\u5668\uff0c\u5b83\u53ea\u5728JOS\u7a7a\u95f2\u9875\u94fe\u8868\u5efa\u7acb\uff08\u865a\u62df\u5185\u5b58\u7cfb\u7edf\u5efa\u7acb\uff09\u4e4b\u524d\u624d\u88ab\u7528\u6765\u7ed9\u9875\u76ee\u5f55\u548c\u9875\u8868\u5206\u914d\u5185\u5b58\uff08`page_alloc()`\u624d\u662f\u4e4b\u540e\u4f1a\u88ab\u771f\u6b63\u4f7f\u7528\u7684\u5206\u914d\u5668\uff09\u3002\u8be5\u51fd\u6570\u6709\u4e00\u4e2a\u65e0\u7b26\u53f7\u6574\u6570\u53c2\u6570`n`\uff0c\u5f53`n>0`\u65f6\uff0c\u51fd\u6570\u4f1a\u5206\u914d\u8db3\u591f\u591a\u7684\u672a\u521d\u59cb\u5316\u7684\u8fde\u7eed\u7269\u7406\u5185\u5b58\u9875\u4ee5\u5bb9\u7eb3`n`\u4e2a`bytes`\uff0c\u5e76\u8fd4\u56de\u5185\u6838\u865a\u62df\u5730\u5740\u3002\u5f53`n=0`\u65f6\uff0c\u76f4\u63a5\u8fd4\u56de\u4e0b\u4e00\u4e2a\u7a7a\u95f2\u9875\u7684\u865a\u62df\u5730\u5740\u3002\n\n#### \u4ee3\u7801\u5206\u6790\n`boot_alloc()`\u51fd\u6570\u7684\u6838\u5fc3\u601d\u60f3\u5c31\u662f\u7ef4\u62a4\u4e00\u4e2a\u9759\u6001\u53d8\u91cf`nextfree`\uff0c\u91cc\u9762\u5b58\u653e\u7740\u4e0b\u4e00\u4e2a\u53ef\u4ee5\u4f7f\u7528\u7684\u7a7a\u95f2\u5185\u5b58\u7a7a\u95f4\u7684\u865a\u62df\u5730\u5740\uff0c\u6bcf\u6b21\u5f53\u51fd\u6570\u5206\u914d\u4e86n\u4e2a\u5b57\u8282\u7684\u5185\u5b58\u65f6\uff0c\u90fd\u9700\u8981\u4fee\u6539\u8fd9\u4e2a\u53d8\u91cf\u7684\u503c\u3002\n\n```c\nstatic void *\nboot_alloc(uint32_t n)\n{\n\tstatic char *nextfree;\t// virtual address of next byte of free memory\n\tchar *result;\n\n\tif (!nextfree) {\n\t\textern char end[];\n\t\tnextfree = ROUNDUP((char *) end, PGSIZE);\n\t}\n\t......\n```\n\n`nextfree`\u662f\u6307\u5411\u4e0b\u4e00\u4e2a\u7a7a\u95f2\u5185\u5b58\u7269\u7406\u9875\u7684\u6307\u9488\uff0c\u7531\u4e8e\u5b83\u662f\u4e00\u4e2a\u9759\u6001\u53d8\u91cf\uff0c\u6240\u4ee5\u8fd9\u4e2a\u6307\u9488\u503c\u5728\u521d\u59cb\u5316\u6216\u4fee\u6539\u4e86\u4ee5\u540e\u4f1a\u4e00\u76f4\u4fdd\u7559\uff0c\u8fd9\u6837\u65b9\u4fbf\u4e86\u7cfb\u7edf\u5728\u521d\u59cb\u5316\u865a\u5b58\u671f\u95f4\u4e00\u76f4\u7ef4\u62a4\u8fd9\u4e2a\u6307\u9488\u3002\u5728\u7b2c\u4e00\u6b21\u8c03\u7528`boot_alloc`\u51fd\u6570\u65f6\uff0c\u7531\u4e8e`nextfree`\u4e3a\u7a7a\uff0c\u6240\u4ee5`nextfree`\u4f1a\u7531`ROUNDUP`\u521d\u59cb\u5316\u4e3a\u8d77\u59cb\u7a7a\u95f2\u9875\u5730\u5740\u3002\n\n```c\n#define ROUNDDOWN(a, n)\t\t\t\t\t\t\\\n({\t\t\t\t\t\t\t\t\\\n\tuint32_t __a = (uint32_t) (a);\t\t\t\t\\\n\t(typeof(a)) (__a - __a % (n));\t\t\t\t\\\n})\n```\n\n```c\n// Round up to the nearest multiple of n\n#define ROUNDUP(a, n)\t\t\t\t\t\t\\\n({\t\t\t\t\t\t\t\t\\\n\tuint32_t __n = (uint32_t) (n);\t\t\t\t\\\n\t(typeof(a)) (ROUNDDOWN((uint32_t) (a) + __n - 1, __n));\t\\\n})\n```\n\n`ROUNDUP`\u7684\u4f5c\u7528\u662f\u5c06\u5730\u5740\u503c\u5411\u4e0a\u53d6\u6574\u5230\u4e00\u4e2a\u80fd\u6574\u9664\u9875\u5927\u5c0fPGSIZE\u7684\u503c\uff0c\u4fdd\u8bc1\u5185\u5b58\u662f\u6309\u9875\u5206\u914d\u7684\u3002\u5728\u8fd9\u91cc\uff0c\u7a7a\u95f2\u9875\u5730\u5740\u662f\u4ece`end`\u5f00\u59cb\u7684\uff0c\u800c\u5c40\u90e8\u53d8\u91cf`end`\u53c8\u662f\u7531\u94fe\u63a5\u5668\u751f\u6210\u7684\u3002\n\n```c\n/* The data segment */\n\t.data : {\n\t\t*(.data)\n\t}\n\n\t.bss : {\n\t\tPROVIDE(edata = .);\n\t\t*(.bss)\n\t\tPROVIDE(end = .);\n\t\tBYTE(0)\n\t}\n```\n\u67e5\u770b`kern/kernel.ld`\u53ef\u4ee5\u53d1\u73b0\uff0cend\u662f\u5185\u6838`bss`\u6bb5\u672b\u5c3e\u3002\u6240\u4ee5`boot_alloc`\u5206\u914d\u7684\u7a7a\u95f4\u4ece\u8fd9\u91cc\u5f00\u59cb\u3002\n\n```c\n\t// boot_alloc\n\tresult = nextfree;\n\tnextfree = ROUNDUP(nextfree+n, PGSIZE);\n\tif((uint32_t)nextfree - KERNBASE > (npages*PGSIZE))\n\t\tpanic(\"Out of memory!\\n\");\n\treturn result;\n}\n```\n\n\u6700\u540e\uff0c\u51fd\u6570\u7684\u8fd4\u56de\u503c\u4fbf\u662f`nextfree`\u7ef4\u62a4\u7684\u5f53\u524d\u7a7a\u95f2\u9875\u8d77\u59cb\u5730\u5740\uff0c\u7531\u4e8e\u8981\u4ece\u8fd9\u4e2a\u5730\u5740\u5f00\u59cb\u5206\u914d\u81f3\u5c11\u4e3an\u4e2a\u5b57\u8282\u7684\u7a7a\u95f4\uff0c\u6240\u4ee5\u5728\u51fd\u6570\u8fd4\u56de\u4e4b\u524d\u8fd8\u8981\u6839\u636en\u7684\u503c\u5bf9nextfree\u8fdb\u884c\u66f4\u65b0\uff0c\u8ba9\u5b83\u8d8a\u8fc7\u8fd9\u6bb5\u88ab\u5206\u914d\u7684\u7a7a\u95f4\uff0c\u5230\u8fbe\u7d27\u90bb\u8fd9\u6bb5\u7a7a\u95f4\u672b\u5c3e\u7684\u7a7a\u95f2\u9875\u7684\u8d77\u59cb\u5730\u5740\u3002\u53ef\u4ee5\u770b\u51fa\uff0c\u5f53n=0\u65f6\uff0c\u51fd\u6570\u5b9e\u9645\u4e0a\u4e0d\u5206\u914d\u7a7a\u95f4\uff0c\u53ea\u662f\u8fd4\u56de\u5f53\u524d\u7a7a\u95f2\u7269\u7406\u9875\u5730\u5740\uff1b\u800c\u5f53`nextfree`\u5730\u5740\u503c\u8d85\u51fa\u5185\u5b58\u7a7a\u95f4\u4e0a\u754c\uff0c\u4e0d\u80fd\u5206\u914d\u66f4\u591a\u7684\u7269\u7406\u5185\u5b58\u65f6\uff0c\u5c31\u4f1a\u4ea7\u751f\u4e00\u4e2a\u5185\u5b58\u6ea2\u51fa\u7684panic\u3002\n\n### **page_init()\u51fd\u6570**\n\n#### \u51fd\u6570\u529f\u80fd\n\n`page_init()`\u51fd\u6570\u7684\u4f5c\u7528\u662f\u521d\u59cb\u5316\u9875\u7ed3\u6784\u4f53\u4ee5\u53ca\u7a7a\u95f2\u5185\u5b58\u9875\u5217\u8868\n\n`page_free_list`\u3002\u6bcf\u4e2a\u7269\u7406\u9875\u7684\u4fe1\u606f\u90fd\u662f\u901a\u8fc7\u4e00\u4e2a\u9875\u7ed3\u6784\u4f53\u2014\u2014`PageInfo`\u6765\u7ef4\u62a4\u7684\u3002\u800c\u6240\u6709\u7a7a\u95f2\u9875\u7684`PageInfo`\u7ed3\u6784\u4f53\u90fd\u4e32\u8054\u5728\u7a7a\u95f2\u9875\u5217\u8868`page_free_list`\u4e2d\u3002\n\n```c\nstruct PageInfo {\n\tstruct PageInfo *pp_link;\n\tuint16_t pp_ref;\n};\n```\n\u5728`PageInfo`\u7ed3\u6784\u4f53\u4e2d\uff0c`pp_link`\u4e3a\u94fe\u8868\u4e0b\u2f00\u8282\u70b9\u7684\u6307\u9488\u3002`pp_ref`\u8bb0\u5f55\u4e86\u8be5\u7269\u7406\u2eda\u88ab\u6620\u5c04\u5f15\u2f64\u7684\u6b21\u6570\u3002\u5f53`pp_ref==0`\u65f6\u8fd9\u4e2a\u7269\u7406\u2eda\u662f\u7a7a\u95f2\u7684\u3002\n\n#### \u4ee3\u7801\u5206\u6790\n\n`page_init()`\u51fd\u6570\u7684\u6838\u5fc3\u90e8\u5206\u5c31\u662f\u4e00\u4e2a\u521d\u59cb\u5316\u7269\u7406\u9875\u5bf9\u5e94\u7684`PageInfo`\u7ed3\u6784\u4f53\u4ee5\u53ca\u5efa\u7acb\u7a7a\u95f2\u9875\u5217\u8868\u7684for\u5faa\u73af\u3002\u6211\u4eec\u5148\u6765\u770b\u770b\u7269\u7406\u5185\u5b58\u7684\u60c5\u51b5\u3002\n\n![mem.png](http://182.92.131.202:8000/uploads/20205810125801823297.jpg)\n\n\u7531\u4e0a\u56fe\u53ef\u77e5\uff0cJOS\u628a\u6574\u4e2a\u7269\u7406\u5185\u5b58\u7a7a\u95f4\u5212\u5206\u6210\u4e09\u4e2a\u90e8\u5206\uff1a\n\n1. `[0, npages_basemem * PGSIZE) = [0x00000, 0xA0000)`\uff0c\u8fd9\u90e8\u5206\u88ab\u79f0\u4e3abase memory\u3002\n2. `[IOPHYSMEM, EXTPHYSMEM) = [0xA0000, 0x100000)`\uff0c\u8fd9\u90e8\u5206\u88ab\u79f0\u4e3aIO hole\u3002\n3. `[EXTPHYSMEM, ...) = [0x100000,...)`\uff0c\u8fd9\u90e8\u5206\u88ab\u79f0\u4e3aextended memory\u3002\n\n\u7531\u51fd\u6570\u4e2d\u7684\u6ce8\u91ca\u53ef\u4ee5\u770b\u51fa\u521d\u59cb\u5316\u65f6\u7269\u7406\u5185\u5b58\u7684\u7a7a\u95f2\u60c5\u51b5\uff1a\n\n- \u5728\u5185\u5b58\u7a7a\u95f4\u4e2d\uff0c\u7b2c\u4e00\u4e2a\u7269\u7406\u9875\uff080\u53f7\uff09\u5df2\u7ecf\u88ab\u7528\u4e8e\u4fdd\u7559\u5b9e\u6a21\u5f0f\u4e0b\u7684IDT\u548cBIOS\u7ed3\u6784\uff0cbase memory\u4e2d\u7684\u5176\u4ed6\u90e8\u5206`[PGSIZE, npages_basemem * PGSIZE)`\u8fd8\u662f\u7a7a\u95f2\u7684\uff1b\n- `IO hole`\uff08\u5730\u5740\u8303\u56f4`[IOPHYSMEM, EXTPHYSMEM)`\uff09\u662f\u5206\u914d\u7ed9\u5916\u90e8\u8bbe\u5907\u7684\uff0c\u975e\u7a7a\u95f2\uff1b\n- `extended memory`\u7684\u8303\u56f4\u662f[EXTPHYSMEM, ...)\uff0c\u6211\u4eec\u9700\u8981\u8bbe\u6cd5\u77e5\u9053`extended memory`\u4e2d\u5df2\u7ecf\u88ab\u5206\u914d\u7684\u9875\u6570\u91cf\u3002\n\n```c\nvoid\npage_init(void)\n{\n\tsize_t i;\n\tpage_free_list = NULL;\n\n\t//num_alloc\uff1a\u5728extmem\u533a\u57df\u5df2\u7ecf\u88ab\u5360\u7528\u7684\u9875\u7684\u4e2a\u6570\n\tint num_alloc = ((uint32_t)boot_alloc(0) - KERNBASE) / PGSIZE;\n\t//num_iohole\uff1a\u5728io hole\u533a\u57df\u5360\u7528\u7684\u9875\u6570\n\tint num_iohole = 96;\n\t......\n```\n\n\u9605\u8bfb`page_init`\u51fd\u6570\u7684\u4ee3\u7801\u3002\u9996\u5148`page_init`\u51fd\u6570\u901a\u8fc7`boot_alloc(0)`\u8fd4\u56de\u7684\u5f53\u524d\u7a7a\u95f2\u9875\u5730\u5740\u8ba1\u7b97\u51fa\u5728extmem\u533a\u57df\u5df2\u7ecf\u88ab\u5360\u7528\u7684\u9875\u7684\u4e2a\u6570`num_alloc`\uff0c\u800cIO hole\u533a\u57df\u5360\u7528\u7684\u9875\u6570`num_iohole`\u662f\u786e\u5b9a\u7684\uff0c\u4e3a96\u4e2a\u9875\u3002\n\n```c\n\tfor(i=0; i<npages; i++)\n\t{\n\t    if(i==0)\n\t    {\n\t        pages[i].pp_ref = 1;\n\t    }    \n\t    else if(i >= npages_basemem && i < npages_basemem + num_iohole + num_alloc)\n\t    {\n\t        pages[i].pp_ref = 1;\n\t    }\n\t    else\n\t    {\n\t        pages[i].pp_ref = 0;\n\t        pages[i].pp_link = page_free_list;\n\t        page_free_list = &pages[i];\n\t    }\n\t}\n}\n```\n\n\u63a5\u4e0b\u6765\u8fdb\u5165\u521d\u59cb\u5316\u7684for\u5faa\u73af\uff0c\u904d\u5386\u6240\u6709\u7269\u7406\u9875\u5bf9\u5e94\u7684`PageInfo`\u7ed3\u6784\u4f53\u3002\u5f53\u9047\u5230\u975e\u7a7a\u95f2\u7684\u9875\uff08\u7b2c\u4e00\u4e2a\u7269\u7406\u9875\uff0cIO hole\u4e2d\u7684\u9875\uff0cextmem\u533a\u57df\u5df2\u7ecf\u88ab\u5360\u7528\u7684\u9875\uff09\u65f6\uff0c\u5c06`pp_ref` \u521d\u59cb\u5316\u4e3a1\uff1b\u5f53\u9047\u5230\u7a7a\u95f2\u9875\u65f6\uff0c\u5c06`pp_ref` \u521d\u59cb\u5316\u4e3a0\uff0c\u5e76\u628a\u8be5\u9875\u52a0\u5230\u7a7a\u95f2\u9875\u94fe\u8868`page_free_list`\u7684\u9996\u90e8\u3002\u53ef\u4ee5\u53d1\u73b0\uff0c\u8fd9\u6837\u521d\u59cb\u5316\u5b8c\u6210\u7684\u7a7a\u95f2\u9875\u94fe\u8868\u4e2d\u7684\u7a7a\u95f2\u9875\u7269\u7406\u5730\u5740\u662f\u4ece\u9ad8\u5230\u4f4e\u6392\u5217\u7684\u3002\n\n\u81f3\u6b64`page_init`\u51fd\u6570\u7684\u804c\u8d23\u5b8c\u6210\u3002\n\n### **mem_init()\u51fd\u6570**\n\n\u56e0\u4e3a\u4f59\u4e0b\u7684`page_*`\u51fd\u6570\u90fd\u662f\u5728\u521d\u59cb\u5316\u5185\u6838\u6570\u636e\u7ed3\u6784\u4e4b\u540e\u518d\u4f7f\u7528\uff0c\u6240\u4ee5\u6211\u4eec\u5148\u5206\u6790mem_init\u51fd\u6570\u7684\u4e00\u90e8\u5206\u3002\n\n#### \u51fd\u6570\u529f\u80fd\n\n\u7b80\u800c\u8a00\u4e4b\uff0cmem_init\u51fd\u6570\u7684\u4f5c\u7528\u662f\u5185\u5b58\u7ba1\u7406\u7cfb\u7edf\u7684\u521d\u59cb\u5316\uff0c\u5efa\u7acb\u5185\u6838\u90e8\u5206\u7684\u5730\u5740\u7a7a\u95f4\u548c\u4e8c\u7ea7\u9875\u8868\u3002\u6211\u4eec\u8981\u5206\u6790\u7684\u524d\u534a\u90e8\u5206\u7684\u4e3b\u8981\u5de5\u4f5c\u662f\u521d\u59cb\u5316\u4e86\u5185\u6838\u9875\u76ee\u5f55\u8868\uff0c\u521d\u59cb\u5316\u7269\u7406\u9875\u5bf9\u5e94\u9875\u4fe1\u606f\u7ed3\u6784\u4f53`PageInfo`\uff0c\u6784\u5efa\u7a7a\u95f2\u7269\u7406\u9875\u94fe\u8868\u3002\u6211\u4eec\u76f4\u63a5\u901a\u8fc7\u4ee3\u7801\u6765\u8bf4\u660e\u5b83\u7684\u6d41\u7a0b\u3002\n\n#### \u4ee3\u7801\u5206\u6790\n\n```c\nvoid\nmem_init(void)\n{\n\tuint32_t cr0;\n\tsize_t n;\n\n\ti386_detect_memory();\n```\n\n\u9996\u5148`mem_init`\u8c03\u7528`i386_detect_memory()`\u51fd\u6570\u3002\u8be5\u51fd\u6570\u7684\u4f5c\u7528\u662f\u68c0\u6d4b\u73b0\u5728\u673a\u5668\u4e2d\u6709\u591a\u5c11\u53ef\u7528\u7684\u7269\u7406\u5185\u5b58\u7a7a\u95f4\u3002\n\n```c\nstatic void\ni386_detect_memory(void)\n{\n\tsize_t basemem, extmem, ext16mem, totalmem;\n\n\tbasemem = nvram_read(NVRAM_BASELO);\n\textmem = nvram_read(NVRAM_EXTLO);\n\text16mem = nvram_read(NVRAM_EXT16LO) * 64;\n\n\tif (ext16mem)\n\t\ttotalmem = 16 * 1024 + ext16mem;\n\telse if (extmem)\n\t\ttotalmem = 1 * 1024 + extmem;\n\telse\n\t\ttotalmem = basemem;\n\n\tnpages = totalmem / (PGSIZE / 1024);\n\tnpages_basemem = basemem / (PGSIZE / 1024);\n\n\tcprintf(\"Physical memory: %uK available, base = %uK, extended = %uK\\n\",\n\t\ttotalmem, basemem, totalmem - basemem);\n}\n```\n\n`i386_detect_memory()`\u51fd\u6570\u901a\u8fc7CMOS\u8c03\u7528\u63a5\u53e3\u6765\u68c0\u6d4b\u673a\u5668\u4e2d\u53ef\u7528\u7684base memory\u548cextended memory\u7684\u2f24\u2f29\uff0c\u636e\u6b64\u8ba1\u7b97\u51fa\u7269\u7406\u5185\u5b58\u603b\u2f24\u2f29totalmem\u3002\u518d\u901a\u8fc7\u5b83\u4eec\u8ba1\u7b97\u51fa\u7269\u7406\u2eda\u603b\u6570`npages`\u548cbase memory\u4e2d\u7269\u7406\u2eda\u6570\u91cf`npages_basemem`\u3002`npages`\u548c`npages_basemem`\u90fd\u662f\u5168\u5c40\u53d8\u91cf\uff0c\u4f1a\u5728\u4e4b\u524d\u6211\u4eec\u5206\u6790\u8fc7\u7684`page_init()`\u51fd\u6570\u4e2d\u7528\u5230\u3002\n\n```c\n\tkern_pgdir = (pde_t *) boot_alloc(PGSIZE);\n\tmemset(kern_pgdir, 0, PGSIZE);\n```\n\n\u4e4b\u540e\uff0c`mem_init`\u51fd\u6570\u8c03\u7528`boot_alloc()`\u51fd\u6570\u4e3a\u5185\u6838\u9875\u76ee\u5f55\u5206\u914d\u4e00\u4e2a\u9875\u5927\u5c0f\u7684\u7269\u7406\u7a7a\u95f4\uff0c\u5e76\u8c03\u7528`memset`\u5c06\u9875\u76ee\u5f55\u6e05\u96f6\u3002`kern_pgdir`\u662f\u6307\u5411\u9875\u76ee\u5f55\u7684\u6307\u9488\u3002\n\n```c\n\tkern_pgdir[PDX(UVPT)] = PADDR(kern_pgdir) | PTE_U | PTE_P;\n```\n\n\u63a5\u4e0b\u6765\u7684\u6307\u4ee4\u4e3a\u9875\u76ee\u5f55\u8868\u6dfb\u52a0\u7b2c\u4e00\u4e2a\u9875\u76ee\u5f55\u8868\u9879\u3002\u5728\u8fd9\u91cc\uff0c`PADDR()`\u7684\u4f5c\u7528\u662f\u5c06\u5185\u6838\u865a\u62df\u5730\u5740\u8f6c\u6362\u4e3a\u7269\u7406\u5730\u5740\uff0cPTE_U\u548cPTE_P\u662fPTE\u7684\u63a7\u5236\u4f4d\uff0c\u8bbe\u7f6ePTE_U\u4e3a1\u8868\u793a\u7528\u6237\u7a0b\u5e8f\u80fd\u4f7f\u7528\u8be5\u9875\uff0c\u8bbe\u7f6ePTE_P\u4e3a1\u8868\u793a PTE \u6709\u6548\u5730\u9648\u5217\u5728\u9875\u8868\u4e2d\u3002\u8fd9\u91cc\u5c31\u662f\u8981\u628a\u9875\u76ee\u5f55\u8868\u81ea\u8eab\u4f5c\u4e3a\u7b2c\u2f00\u4e2a\u2eda\u8868\u9879\u63d2\u2f0a\u5230\u9875\u76ee\u5f55\u8868\u4e2d\u3002\n\n```c\n#define MMIOLIM\t\t(KSTACKTOP - PTSIZE)\n#define MMIOBASE\t(MMIOLIM - PTSIZE)\n#define ULIM\t\t(MMIOBASE)\n#define UVPT\t\t(ULIM - PTSIZE)\n```\n\n\u901a\u8fc7\u67e5\u770bmemlayout.h\u6587\u4ef6\uff0c\u6211\u4eec\u53ef\u4ee5\u770b\u5230\uff0cUVPT\u7684\u5b9a\u4e49\u662f\u4e00\u6bb5\u865a\u62df\u5185\u5b58\u7684\u8d77\u59cb\u5730\u5740\uff0c\u4ece\u8fd9\u4e2a\u5730\u5740\u5f00\u59cb\uff0c\u5b58\u653e\u7684\u5c31\u662f\u5185\u6838\u9875\u76ee\u5f55\u8868kern_pgdir\uff0c\u6240\u4ee5\u6211\u4eec\u5fc5\u987b\u628a\u5b83\u548c\u542b\u6709kern_pgdir\u7684\u771f\u5b9e\u7269\u7406\u5730\u5740\u7684\u9875\u8868\u9879\u6620\u5c04\u8d77\u6765\u3002PDX()\u5c06UVPT\u8f6c\u5316\u4e3a\u4e86\u2eda\u2f6c\u5f55\u4e0b\u6807\u3002\n\n```c\n\tpages = (struct PageInfo *) boot_alloc(npages * sizeof(struct PageInfo));\n\tmemset(pages, 0, npages * sizeof(struct PageInfo));\n```\n\n\u4e4b\u540e`mem_init`\u51fd\u6570\u8c03\u7528`boot_alloc()`\u51fd\u6570\u4e3a\u4e00\u4e2a`PageInfo`\u7ed3\u6784\u4f53\u7684\u6570\u7ec4`pages`\u5206\u914d\u4e86\u4e00\u6bb5\u7269\u7406\u7a7a\u95f4\uff0c\u8fd9\u4e2a\u6570\u7ec4\u4e2d\u7684\u6bcf\u4e00\u4e2a`PageInfo`\u90fd\u5bf9\u5e94\u7740\u7269\u7406\u5185\u5b58\u4e2d\u7684\u4e00\u9875\uff0c\u6240\u4ee5\u5206\u914d\u7684\u7269\u7406\u7a7a\u95f4\u5927\u5c0f\u4e5f\u662f`\u7269\u7406\u5185\u5b58\u9875\u603b\u6570*\u7ed3\u6784\u4f53\u5927\u5c0f`\u3002\u7136\u540e\u4f7f\u7528`memset`\u5c06\u8be5\u6570\u7ec4\u6e05\u96f6\u3002\n\n```c\n\tpage_init();\n```\n\n\u4e4b\u540e\uff0c`page_init()`\u4f1a\u4f7f\u7528\u6211\u4eec\u4e4b\u524d\u5206\u914d\u7684`PageInfo`\u7ed3\u6784\u4f53\u6570\u7ec4`pages`\uff0c\u6839\u636e\u7269\u7406\u5185\u5b58\u4f7f\u7528\u60c5\u51b5\u521d\u59cb\u5316`PageInfo`\u7ed3\u6784\u4f53\u5e76\u6784\u5efa\u7a7a\u95f2\u7269\u7406\u9875\u94fe\u8868\u3002\u8fd9\u4e2a\u8fc7\u7a0b\u6211\u4eec\u5df2\u7ecf\u5206\u6790\u8fc7\u3002\n\n```c\n\tcheck_page_free_list(1);\n\tcheck_page_alloc();\n\tcheck_page();\n```\n\n\u63a5\u4e0b\u6765\u76843\u4e2a\u51fd\u6570\u5c31\u662f\u68c0\u67e5\u7a7a\u95f2\u9875\u94fe\u8868\u548c`page_*`\u51fd\u6570\u7684\u529f\u80fd\uff0c\u5728\u6b64\u4e0d\u8be6\u8ff0\u3002\u4e4b\u540e\u5efa\u7acb\u865a\u62df\u5185\u5b58\u7684\u4ee3\u7801\u5f85\u540e\u9762\u7684\u90e8\u5206\u8865\u5145\u5b8c\u6210\u3002\n\n### \u00a0**page_alloc()\u51fd\u6570**\n\n#### \u51fd\u6570\u529f\u80fd\n\n\u5728\u7a7a\u95f2\u9875\u94fe\u8868\u521d\u59cb\u5316\u5b8c\u6210\u540e\uff0cJOS\u5c31\u901a\u8fc7`page_alloc()`\u51fd\u6570\u6765\u5206\u914d\u4e00\u4e2a\u7269\u7406\u9875\u3002`page_alloc()`\u51fd\u6570\u76f4\u63a5\u4ece\u7a7a\u95f2\u9875\u94fe\u8868\u4e0a\u53d6\u7269\u7406\u9875\u5bf9\u5e94\u7684`PageInfo`\u7ed3\u6784\u4f53\u8fd4\u56de\u5373\u53ef\u3002\n\n#### \u4ee3\u7801\u5206\u6790\n\n```c\nstruct PageInfo *\npage_alloc(int alloc_flags)\n{\n    struct PageInfo *result;\n    if (page_free_list == NULL)\n        return NULL;\n\n      result= page_free_list;\n      page_free_list = result->pp_link;\n      result->pp_link = NULL;\n\n    if (alloc_flags & ALLOC_ZERO)\n        memset(page2kva(result), 0, PGSIZE); \n\n      return result;\n}\n```\n\n\u9996\u5148`page_alloc()`\u51fd\u6570\u68c0\u67e5\u662f\u5426\u8fd8\u6709\u5269\u4f59\u7684\u7a7a\u95f2\u7269\u7406\u9875\uff0c\u6ca1\u6709\u5219\u8bf4\u660e\u7a7a\u95f2\u5185\u5b58\u7528\u5c3d\uff0c\u8fd4\u56deNULL\u3002\n\u4e4b\u540e\u51fd\u6570\u4ece\u7a7a\u95f2\u9875\u94fe\u8868`page_free_list`\u4e0a\u53d6\u51fa\u4e00\u4e2a\u7a7a\u95f2\u9875\u7684`PageInfo`\u7ed3\u6784\u4f53\u4f5c\u4e3a\u8fd4\u56de\u7684\u88ab\u5206\u914d\u9875\uff08\u540c\u65f6\u8981\u628a`pp_link`\u7f6e\u4e3aNULL\uff09\uff0c\u5e76\u5c06\u7a7a\u95f2\u9875\u94fe\u8868\u9996\u90e8\u6307\u9488\u6307\u5411\u4e0b\u4e00\u4e2a\u7a7a\u95f2\u9875\u3002\n\u5728\u8fd4\u56de\u524d\uff0c`page_alloc()`\u51fd\u6570\u6839\u636e\u53c2\u6570`alloc_flags`\u51b3\u5b9a\u662f\u5426\u8981\u5c06\u88ab\u5206\u914d\u7684\u9875\u521d\u59cb\u5316\uff08\u6e05\u96f6\uff09\u3002\n\n### \u00a0**page_free()\u51fd\u6570**\n\n#### \u51fd\u6570\u529f\u80fd\n\n`page_free()`\u51fd\u6570\u7684\u529f\u80fd\u662f\u5c06\u7a7a\u95f2\u9875\u56de\u6536\u5230\u7a7a\u95f2\u9875\u94fe\u8868\u4e2d\u3002\n\n#### \u4ee3\u7801\u5206\u6790\n\n```c\nvoid\npage_free(struct PageInfo *pp)\n{\n      assert(pp->pp_ref == 0);\n      assert(pp->pp_link == NULL);\n```\n\n\u5728\u5c06\u7a7a\u95f2\u9875\u653e\u56de\u7a7a\u95f2\u9875\u94fe\u8868\u4e4b\u524d\uff0c\u5fc5\u987b\u8981\u68c0\u67e52\u4e2a\u6761\u4ef6\u2014\u2014\u8be5\u9875\u7684\u5f15\u2f64\u6570`pp_ref`\u662f\u5426\u4e3a0\uff0c\u4ee5\u53ca`pp_link`\u662f\u5426\u4e3aNULL\u3002\u4ee3\u7801\u901a\u8fc7\u5b8f\u5b9a\u4e49\u7684\u65ad\u8a00\u68c0\u67e5\u8fd9\u4e9b`PageInfo`\u7ed3\u6784\u4f53\u7684\u4fe1\u606f\uff0c\u5982\u679c\u4e0d\u7b26\u5408\u671f\u671b\u5219\u4f1a\u62a5panic\u3002\n\n```c\n      pp->pp_link = page_free_list;\n      page_free_list = pp;\n}\n```\n\n\u4e4b\u540e\uff0c\u8be5\u7a7a\u95f2\u9875\u88ab\u653e\u7f6e\u5230\u7a7a\u95f2\u9875\u94fe\u8868\u7684\u9996\u90e8\u3002\u81f3\u6b64\uff0c\u4f20\u5165\u7684\u7a7a\u95f2\u9875\u88ab\u56de\u6536\u3002\n\n## \u53c2\u8003\u6587\u732e\n\n1. Cox, R., Kaashoek, M. F., & Morris, R. (2011). Xv6, a simple Unix-like teaching operating system. 2013-09-05]. http://pdos.csail.mit.edu/6.828/2012/xv6.html.\n2. Carter, P. A. (2001). PC Assembly Language. Free ebook.\n3. Arpaci-Dusseau, R. H., & Arpaci-Dusseau, A. C. (2018). Operating systems: Three easy pieces. Arpaci-Dusseau Books LLC.",
+      "collectors": [
+        1,
+        5
+      ],
+      "likers": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 11,
+    "fields": {
+      "Type": 0,
+      "title": "\u5982\u4f55\u4ece\u96f6\u5f00\u59cb\u5199\u4e00\u4e2a\u7b80\u5355\u7684\u64cd\u4f5c\u7cfb\u7edf\uff1f",
+      "author": 5,
+      "pub_date": "2020-05-10T14:21:29.561Z",
+      "content": "\u770b\u4e86\u300a30 \u5929\u81ea\u5236\u64cd\u4f5c\u7cfb\u7edf\u300b\u4ee5\u540e\uff0c\u5e0c\u671b\u80fd\u81ea\u5df1\u52a8\u624b\u64b8\u4e00\u4e2a\u7b80\u5355\u7684\u64cd\u4f5c\u7cfb\u7edf\u3002",
+      "collectors": [
+        4
+      ],
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.issue",
+    "pk": 12,
+    "fields": {
+      "Type": 1,
+      "title": "\u6587\u7ae0",
+      "author": 8,
+      "pub_date": "2020-06-07T02:54:43.176Z",
+      "content": "\u8fd9\u662f\u4e00\u4e2a",
+      "collectors": [
+        8
+      ],
+      "likers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "issue.answer",
+    "pk": 7,
+    "fields": {
+      "issue": 4,
+      "replier": 3,
+      "pub_date": "2020-05-05T07:31:37Z",
+      "content": "\u6700\u4f18\u5b50\u7ed3\u6784\u6027\u8d28\u662f\u52a8\u6001\u89c4\u5212\u4e2d\u7684\u76f8\u5173\u6982\u5ff5\uff0c\u5176\u6307\uff1a\u95ee\u9898\u7684\u6700\u4f18\u89e3\u7531\u76f8\u5173\u5b50\u95ee\u9898\u7684\u6700\u4f18\u89e3\u7ec4\u5408\u800c\u6210\uff0c\u800c\u8fd9\u4e9b\u5b50\u95ee\u9898\u53ef\u4ee5\u72ec\u7acb\u6c42\u89e3\u3002\u6ee1\u8db3\u6700\u4f18\u5b50\u7ed3\u6784\u6027\u8d28\u7684\u95ee\u9898\u901a\u5e38\u90fd\u53ef\u4ee5\u65b9\u4fbf\u5730\u4f7f\u7528\u52a8\u6001\u89c4\u5212\u6c42\u89e3\u3002",
+      "likers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "issue.answer",
+    "pk": 9,
+    "fields": {
+      "issue": 6,
+      "replier": 3,
+      "pub_date": "2020-05-08T15:52:25Z",
+      "content": "\u5185\u5b58\u7ba1\u7406\u662fC++\u4e2d\u7684\u4e00\u4e2a\u5e38\u89c1\u7684\u9519\u8bef\u548cbug\u6765\u6e90\u3002\u5728\u5927\u90e8\u5206\u60c5\u5f62\u4e2d\uff0c\u8fd9\u4e9bbug\u6765\u81ea\u52a8\u6001\u5206\u914d\u5185\u5b58\u548c\u6307\u9488\u7684\u4f7f\u7528\uff1a\u5f53\u591a\u6b21\u91ca\u653e\u52a8\u6001\u5206\u914d\u7684\u5185\u5b58\u65f6\uff0c\u53ef\u80fd\u4f1a\u5bfc\u81f4\u5185\u5b58\u635f\u574f\u6216\u8005\u81f4\u547d\u7684\u8fd0\u884c\u65f6\u9519\u8bef\uff1b\u5f53\u5fd8\u8bb0\u91ca\u653e\u52a8\u6001\u5206\u914d\u7684\u5185\u5b58\u65f6\uff0c\u4f1a\u5bfc\u81f4\u5185\u5b58\u6cc4\u9732\u3002\u6240\u4ee5\uff0c\u6211\u4eec\u9700\u8981\u667a\u80fd\u6307\u9488\u6765\u5e2e\u52a9\u6211\u4eec\u7ba1\u7406\u52a8\u6001\u5206\u914d\u7684\u5185\u5b58\u3002\u5176\u6765\u6e90\u4e8e\u4e00\u4e2a\u4e8b\u5b9e\uff1a\u6808\u6bd4\u5806\u8981\u5b89\u5168\u7684\u591a\uff0c\u56e0\u4e3a\u6808\u4e0a\u7684\u53d8\u91cf\u79bb\u5f00\u4f5c\u7528\u57df\u540e\uff0c\u4f1a\u81ea\u52a8\u9500\u6bc1\u5e76\u6e05\u7406\u3002\u667a\u80fd\u6307\u9488\u7ed3\u5408\u4e86\u6808\u4e0a\u53d8\u91cf\u7684\u5b89\u5168\u6027\u548c\u5806\u4e0a\u53d8\u91cf\u7684\u7075\u6d3b\u6027\u3002",
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "issue.answer",
+    "pk": 14,
+    "fields": {
+      "issue": 8,
+      "replier": 5,
+      "pub_date": "2020-05-09T13:56:25.625Z",
+      "content": "*\u8f6c\u8f7d\u4e00\u4e2aICML 2018\u7684\u5de5\u4f5c\uff1a* \n\n[Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples](https://arxiv.org/abs/1802.00420)\n---\n\n![example.png](http://182.92.131.202:8000/uploads/20205609135625456666.jpg)\n\nAbove is an [adversarial example](https://blog.openai.com/adversarial-example-research/): the slightly perturbed image of the cat fools an InceptionV3 classifier into classifying it as \"guacamole\". Such \"fooling images\" are [easy to synthesize](http://www.anishathalye.com/2017/07/25/synthesizing-adversarial-examples/) using gradient descent ([Szegedy et al. 2013](https://arxiv.org/abs/1312.6199)).\n\nIn our recent paper, we ++evaluate the robustness of nine papers accepted to ICLR 2018++ as non-certified white-box-secure defenses to adversarial examples. We find that ==seven of the nine defenses provide a limited increase in robustness and can be broken by improved attack techniques we develop==.\n\nBelow is Table 1 from our paper, where we show the robustness of each accepted defense to the adversarial examples we can construct:\n\n| Defense | Dataset | Distance | Accuracy |\n|---|---|---|---|\n| [Buckman et al. (2018)](https://openreview.net/forum?id=S18Su--CW) | CIFAR | 0.031 (linf) | 0%* |\n| [Ma et al. (2018)](https://arxiv.org/abs/1801.02613) | CIFAR | 0.031 (linf) | 5% |\n| [Guo et al. (2018)](https://arxiv.org/abs/1711.00117) | ImageNet | 0.05 (l2) | 0%* |\n| [Dhillon et al. (2018)](https://arxiv.org/abs/1803.01442) | CIFAR | 0.031 (linf) | 0% |\n| [Xie et al. (2018)](https://arxiv.org/abs/1711.01991) | ImageNet | 0.031 (linf) | 0%* |\n| [Song et al. (2018)](https://arxiv.org/abs/1710.10766) | CIFAR | 0.031 (linf) | 9%* |\n| [Samangouei et al. (2018)](https://arxiv.org/abs/1805.06605) | MNIST | 0.005 (l2) | 55%** |\n| [Madry et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 47% |\n| [Na et al. (2018)](https://arxiv.org/abs/1708.02582) | CIFAR | 0.015 (linf) | 15% |\n\n(Defenses denoted with * also propose combining adversarial training; we report here the defense alone. See our paper, Section 5 for full numbers. The fundemental principle behind the defense denoted with ** has 0% accuracy; in practice defense imperfections cause the theoretically optimal attack to fail, see Section 5.4.2 for details.)\n\nThe only defense we observe that significantly increases robustness to adversarial examples within the threat model proposed is \"Towards Deep Learning Models Resistant to Adversarial Attacks\" ([Madry et al. 2018](https://arxiv.org/abs/1706.06083)), and we were unable to defeat this defense without stepping outside the threat model. Even then, this technique has been shown to be difficult to scale to ImageNet-scale ([Kurakin et al. 2016](https://arxiv.org/abs/1611.01236)). The remainder of the papers (besides the paper by Na et al., which provides limited robustness) rely either inadvertently or intentionally on what we call *obfuscated gradients*. Standard attacks apply gradient descent to maximize the loss of the network on a given image to generate an adversarial example on a neural network. Such optimization methods require a useful gradient signal to succeed. When a defense obfuscates gradients, it breaks this gradient signal and causes optimization based methods to fail.\n\nWe identify three ways in which defenses cause obfuscated gradients, and construct attacks to bypass each of these cases. Our attacks are generally applicable to any defense that includes, either intentionally or or unintentionally, a non-differentiable operation or otherwise prevents gradient signal from flowing through the network. We hope future work will be able to use our approaches to perform a more thorough security evaluation.\n\n## Paper\n\n**Abstract:**\n\nWe identify obfuscated gradients, a kind of gradient masking, as a phenomenon that leads to a false sense of security in defenses against adversarial examples. While defenses that cause obfuscated gradients appear to defeat iterative optimization-based attacks, we find defenses relying on this effect can be circumvented. We describe characteristic behaviors of defenses exhibiting the effect, and for each of the three types of obfuscated gradients we discover, we develop attack techniques to overcome it. In a case study, examining non-certified white-box-secure defenses at ICLR 2018, we find obfuscated gradients are a common occurrence, with 7 of 9 defenses relying on obfuscated gradients. Our new attacks successfully circumvent 6 completely, and 1 partially, in the original threat model each paper considers.\n\nFor details, read our [paper](https://arxiv.org/abs/1802.00420).\n\n## Source code\n\nThis repository contains our instantiations of the general attack techniques described in our paper, breaking 7 of the ICLR 2018 defenses. Some of the defenses didn't release source code (at the time we did this work), so we had to reimplement them.\n\n## Citation\n\n```\n@inproceedings{obfuscated-gradients,\n  author = {Anish Athalye and Nicholas Carlini and David Wagner},\n  title = {Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples},\n  booktitle = {Proceedings of the 35th International Conference on Machine Learning, {ICML} 2018},\n  year = {2018},\n  month = jul,\n  url = {https://arxiv.org/abs/1802.00420},\n}\n```",
+      "likers": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "model": "issue.answer",
+    "pk": 15,
+    "fields": {
+      "issue": 11,
+      "replier": 6,
+      "pub_date": "2020-05-10T14:28:08.080Z",
+      "content": "# OS: Three Easy Pieces.\n\u8fd9\u662f\u4e00\u672c\u795e\u4e66\uff0c\u5efa\u8bae\u9898\u4e3b\u770b\u4e0b",
+      "likers": []
+    }
+  },
+  {
+    "model": "issue.answer",
+    "pk": 16,
+    "fields": {
+      "issue": 11,
+      "replier": 5,
+      "pub_date": "2020-05-13T10:15:51.366Z",
+      "content": "\u6709\u5174\u8da3\u53ef\u4ee5\u53c2\u8003\u6e05\u534e\u7684rCore OS\u9879\u76ee\u3002\n![rcore.png](http://182.92.131.202:8000/uploads/20201513101551203349.jpg)\n\n",
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 1,
+    "fields": {
+      "from_id": 1,
+      "to_id": 3,
+      "pub_date": "2020-05-08T14:50:37.333Z",
+      "content": "\u53ef\u4ee5\u8be6\u5c3d\u4e00\u4e9b\u5417",
+      "content_type": 10,
+      "object_id": 7,
+      "parent_comment": null,
+      "likers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 2,
+    "fields": {
+      "from_id": 4,
+      "to_id": 1,
+      "pub_date": "2020-05-09T02:31:15.601Z",
+      "content": "\u4e00\u7ea7\u8bc4\u8bba4",
+      "content_type": 9,
+      "object_id": 4,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 10,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-05-10T12:21:53.504Z",
+      "content": "\u8fd9\u7bc7\u6587\u7ae0\u7834\u89e3\u4e867\u7bc7ICLR2018\u6587\u7ae0\u7684\u5bf9\u6297\u9632\u5fa1\u65b9\u6cd5\uff01",
+      "content_type": 10,
+      "object_id": 14,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 11,
+    "fields": {
+      "from_id": 5,
+      "to_id": 3,
+      "pub_date": "2020-05-10T13:35:15.560Z",
+      "content": "\u597d\u56de\u7b54",
+      "content_type": 10,
+      "object_id": 9,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 13,
+    "fields": {
+      "from_id": 6,
+      "to_id": 3,
+      "pub_date": "2020-05-10T14:26:56.131Z",
+      "content": "test reply",
+      "content_type": 10,
+      "object_id": 7,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 14,
+    "fields": {
+      "from_id": 5,
+      "to_id": 3,
+      "pub_date": "2020-05-10T14:28:00.323Z",
+      "content": "\u6211\u4e5f\u6765\u6d4b\u8bd5\u8bc4\u8bba",
+      "content_type": 10,
+      "object_id": 7,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 15,
+    "fields": {
+      "from_id": 4,
+      "to_id": 5,
+      "pub_date": "2020-06-03T06:48:30.426Z",
+      "content": "\u4f60\u597d",
+      "content_type": 11,
+      "object_id": 14,
+      "parent_comment": 14,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 16,
+    "fields": {
+      "from_id": 4,
+      "to_id": 5,
+      "pub_date": "2020-06-03T06:48:51.026Z",
+      "content": "\u6211\u89c9\u5f97\u4f60\u4e0d\u884c",
+      "content_type": 11,
+      "object_id": 14,
+      "parent_comment": 14,
+      "likers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 20,
+    "fields": {
+      "from_id": 4,
+      "to_id": 4,
+      "pub_date": "2020-06-03T07:46:58.056Z",
+      "content": "\uff1f",
+      "content_type": 11,
+      "object_id": 18,
+      "parent_comment": 14,
+      "likers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 23,
+    "fields": {
+      "from_id": 4,
+      "to_id": 5,
+      "pub_date": "2020-06-03T07:49:54.396Z",
+      "content": "\uff1f\uff1f\uff1f\uff1f",
+      "content_type": 11,
+      "object_id": 14,
+      "parent_comment": 14,
+      "likers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 32,
+    "fields": {
+      "from_id": 4,
+      "to_id": 3,
+      "pub_date": "2020-06-03T08:10:16.432Z",
+      "content": "\u6211\u53bb",
+      "content_type": 10,
+      "object_id": 7,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 33,
+    "fields": {
+      "from_id": 5,
+      "to_id": 4,
+      "pub_date": "2020-06-03T08:29:49.508Z",
+      "content": "\u56de\u590d\u8bc4\u8bba\u6d4b\u8bd5",
+      "content_type": 11,
+      "object_id": 32,
+      "parent_comment": 32,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 34,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-03T08:31:39.940Z",
+      "content": "\u8bc4\u8bba\u4e8c\u7ea7\u8bc4\u8bba",
+      "content_type": 11,
+      "object_id": 33,
+      "parent_comment": 32,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 35,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-03T15:27:54.380Z",
+      "content": "\u7ee7\u7eed\u8bc4\u8bba",
+      "content_type": 11,
+      "object_id": 34,
+      "parent_comment": 32,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 36,
+    "fields": {
+      "from_id": 4,
+      "to_id": 5,
+      "pub_date": "2020-06-03T15:56:56.485Z",
+      "content": "12121212",
+      "content_type": 11,
+      "object_id": 35,
+      "parent_comment": 32,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 37,
+    "fields": {
+      "from_id": 5,
+      "to_id": 4,
+      "pub_date": "2020-06-03T16:04:05.599Z",
+      "content": "\u8fd8\u884c",
+      "content_type": 11,
+      "object_id": 36,
+      "parent_comment": 32,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 44,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-09T15:27:52.848Z",
+      "content": "\u6765\u8bc4\u8bba",
+      "content_type": 9,
+      "object_id": 10,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 56,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T05:28:33.605Z",
+      "content": "666",
+      "content_type": 10,
+      "object_id": 16,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 57,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T06:47:25.327Z",
+      "content": "\u8bc4\u8bba\u6587\u7ae0\u7684\u8bc4\u8bba",
+      "content_type": 11,
+      "object_id": 44,
+      "parent_comment": 44,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 58,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T06:47:49.978Z",
+      "content": "\u8bc4\u8bba\u4e8c\u7ea7\u8bc4\u8bba",
+      "content_type": 11,
+      "object_id": 57,
+      "parent_comment": 44,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 59,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T06:52:01.903Z",
+      "content": "\u7ee7\u7eed\u8bc4\u8bba",
+      "content_type": 9,
+      "object_id": 10,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 60,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T06:54:03.071Z",
+      "content": "\u611f\u89c9\u53ef\u4ee5\u52a0\u4e9b\u56fe",
+      "content_type": 11,
+      "object_id": 11,
+      "parent_comment": 11,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 61,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T06:57:05.692Z",
+      "content": "\u597d\u7684",
+      "content_type": 11,
+      "object_id": 60,
+      "parent_comment": 11,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 63,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:01:50.148Z",
+      "content": "\u518d\u6765\u4e00\u6b21",
+      "content_type": 11,
+      "object_id": 44,
+      "parent_comment": 44,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 64,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:03:54.850Z",
+      "content": "\u518d\u6765",
+      "content_type": 11,
+      "object_id": 63,
+      "parent_comment": 44,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 65,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:12:00.106Z",
+      "content": "\u8bc4\u8bba1",
+      "content_type": 9,
+      "object_id": 12,
+      "parent_comment": null,
+      "likers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 89,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:29:38.800Z",
+      "content": "\u56de\u590d1",
+      "content_type": 11,
+      "object_id": 65,
+      "parent_comment": 65,
+      "likers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 91,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:31:19.224Z",
+      "content": "\u56de\u590d2",
+      "content_type": 11,
+      "object_id": 65,
+      "parent_comment": 65,
+      "likers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 93,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:34:54.718Z",
+      "content": "\u56de\u590d",
+      "content_type": 9,
+      "object_id": 12,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 94,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:36:04.513Z",
+      "content": "\u4e00\u4e2a\u8bc4\u8bba",
+      "content_type": 9,
+      "object_id": 12,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 98,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:37:42.770Z",
+      "content": "123\n12432134",
+      "content_type": 9,
+      "object_id": 12,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 99,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:38:51.880Z",
+      "content": "\u53e6\u4e00\u4e2a\u8bc4\u8bba",
+      "content_type": 9,
+      "object_id": 12,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 100,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:39:45.032Z",
+      "content": "\u505a\u4e00\u4e2a\u56de\u590d",
+      "content_type": 11,
+      "object_id": 99,
+      "parent_comment": 99,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 101,
+    "fields": {
+      "from_id": 8,
+      "to_id": 8,
+      "pub_date": "2020-06-10T07:39:56.725Z",
+      "content": "\u56de\u590d\u8fd9\u4e2a\u56de\u590d",
+      "content_type": 11,
+      "object_id": 100,
+      "parent_comment": 99,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 102,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:41:16.919Z",
+      "content": "666",
+      "content_type": 9,
+      "object_id": 10,
+      "parent_comment": null,
+      "likers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 103,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:42:13.416Z",
+      "content": "\u53ef\u4ee5",
+      "content_type": 11,
+      "object_id": 102,
+      "parent_comment": 102,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 104,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:42:22.986Z",
+      "content": "\u5f88\u597d",
+      "content_type": 11,
+      "object_id": 103,
+      "parent_comment": 102,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 105,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:43:06.916Z",
+      "content": "\u6765\u6765\u6765",
+      "content_type": 11,
+      "object_id": 44,
+      "parent_comment": 44,
+      "likers": []
+    }
+  },
+  {
+    "model": "comment.comment",
+    "pk": 106,
+    "fields": {
+      "from_id": 5,
+      "to_id": 5,
+      "pub_date": "2020-06-10T07:43:56.771Z",
+      "content": "\u5b8c\u6210\uff01",
+      "content_type": 9,
+      "object_id": 10,
+      "parent_comment": null,
+      "likers": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2020-04-30T13:17:14.190Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "starshine",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2020-04-30T13:18:51.985Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "cy360124@163.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2020-04-30T14:02:11.740Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "\u8f66\u6d0b",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2020-05-01T07:10:00.054Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Issue object (1)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2020-05-01T11:57:59.095Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Issue object (4)",
+      "action_flag": 2,
+      "change_message": "[{\"deleted\": {\"name\": \"answer\", \"object\": \"Answer object (None)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2020-05-01T12:12:24.131Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Issue object (4)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"answer\", \"object\": \"Answer object (5)\", \"fields\": [\"Pub date\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2020-05-05T07:19:17.486Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "\u8f66\u6d0b",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2020-05-05T07:26:04.763Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "\u6d69\u6e3a\u661f\u7a7a",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2020-05-05T07:31:00.842Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Issue object (4)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\"]}}, {\"deleted\": {\"name\": \"answer\", \"object\": \"Answer object (None)\"}}, {\"deleted\": {\"name\": \"answer\", \"object\": \"Answer object (None)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2020-05-05T07:34:26.923Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Issue object (4)",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"answer\", \"object\": \"Answer object (7)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2020-05-05T07:46:03.600Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Issue object (5)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2020-05-05T07:46:32.062Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Issue object (5)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2020-05-05T07:47:32.683Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Issue object (5)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2020-05-08T14:01:59.751Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "Test",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2020-05-08T14:40:10.574Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "Test",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2020-05-08T14:41:09.468Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test-user",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2020-05-08T14:41:43.493Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test-user",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2020-05-08T14:42:04.292Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "Test",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2020-05-08T14:42:14.675Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test-user",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2020-05-08T14:42:58.012Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test-user",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2020-05-08T14:43:08.847Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "Test",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2020-05-08T14:43:27.489Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "test-user",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2020-05-08T14:44:06.923Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "test-user",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"User permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2020-05-08T14:45:54.797Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "\u6d69\u6e3a\u661f\u7a7a",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2020-05-08T14:46:04.899Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "starshine",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2020-05-08T15:47:59.467Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "6",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2020-05-08T15:52:02.171Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "6",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Pub date\"]}}, {\"added\": {\"name\": \"answer\", \"object\": \"9\"}}]"
+    }
+  }
+]
