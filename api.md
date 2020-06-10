@@ -312,9 +312,9 @@ no data
 
 **note:** message是消息的结构体，字典类型，具体字段如下。有五种消息：问题新增回答、文章新增评论、回答新增评论
 
-* 问题新增回答：type = 1, issue_id是被回答的问题；answer_id是该新增回答；parent_comment_id = comment_id = -1
-* 文章新增评论：type = 2, issue_id是被评论的文章；answer_id = -1；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
-* 回答新增评论：type = 3, issue_id是对应问题；answer_id是对应回答；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
+* 问题新增回答：type = 0, issue_id是被回答的问题；answer_id是该新增回答；parent_comment_id = comment_id = -1
+* 文章新增评论：type = 1, issue_id是被评论的文章；answer_id = -1；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
+* 回答新增评论：type = 2, issue_id是对应问题；answer_id是对应回答；若新增一级评论，则parent_comment_id = -1，否则parent_comment_id是新增评论所属一级评论；comment_id是该新增评论
 
 ```
 {

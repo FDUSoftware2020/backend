@@ -44,7 +44,7 @@ def comment_create(request):
             comment = Comment(from_id=from_user, to_id=to_user, pub_date=pub_date, content=content,
                                    content_object=content_object, parent_comment=parent_comment)
             comment.save()
-            create_message_for_comment(type, comment)
+            create_message_for_comment(comment)
             response_content = {"err_code": 0, "message": "发布成功", "data": None}
     else:
         response_content = {"err_code": -1, "message": "请求方式错误", "data": None}
@@ -212,7 +212,7 @@ def conduct_detail_comment(comment, user):
     }
 
 
-def create_message_for_comment(Type, comment):
+def create_message_for_comment(comment):
     ''' 为评论新建通知消息
     Arguments:
         Type: 1, 对文章添加评论；2，对回答添加评论；3，对评论添加评论
