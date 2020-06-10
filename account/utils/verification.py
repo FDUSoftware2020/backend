@@ -1,5 +1,6 @@
 from ..models import VerificationCode
-
+from django.utils import timezone
+import random
 
 def make_verification_code():
     ''' 随机生成4位验证码
