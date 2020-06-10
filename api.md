@@ -478,7 +478,7 @@ no data
 }
 ```
 
-**Note:** 搜索的结果可能含有大量的Issue对象，直接返回Issue的全部内容须耗费较多带宽。因此，返回brief_issue_list即brief_issue的列表,其中brief_issue是字典类型，结构与上文的issue一致，区别在于issue的content字段含有全部内容，而brief_issue的content字段仅含有原文的一小段首文字。注意：后端默认排序方式是title的字符顺序，故提供其他字段以便前端改变排序方式。
+**Note:** 搜索的结果可能含有大量的Issue对象，直接返回Issue的全部内容须耗费较多带宽。因此，返回brief_issue_list即brief_issue的列表,其中brief_issue是字典类型，结构与上文的issue一致，区别在于issue的content字段含有全部内容，而brief_issue的content字段仅含有原文的一小段首文字。注意：后端默认排序方式是title的字符顺序，故提供其他字段以便前端改变排序方式。此外，当keyword是空字符串时，返回推荐列表，推荐标准是最近发布的（至多）10个Issue。
 
 
 ### 5. GET /issue/&lt;int:issue_id&gt;/collect/

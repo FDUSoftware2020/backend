@@ -70,7 +70,10 @@ def issue_search(request):
     if request.method == "POST":
         data = json.loads(request.body)
         keyword = data.get("keyword")
-        issue_list = Issue.objects.filter(title__icontains=keyword).order_by('title')
+        if keyword == "":
+            issue_list = Issue.objects.all().order_by('-pub_date')[:10]
+        else:
+            issue_list = Issue.objects.filter(title__icontains=keyword).order_by('title')
         user = backend_ask_login_user(request)
         obj_list = []
         for issue in issue_list:
